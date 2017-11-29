@@ -14,6 +14,63 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 body {
   font-size: 13px;
 }
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
 </style>
 <body class="w3-light-grey">
   <nav style="background-color:#fff!important"class="navbar navbar-default navbar-fixed-top">
@@ -31,22 +88,66 @@ body {
   <!-- Page Container -->
   <div class="w3-content" style="margin-top:60px" style="max-width:1400px;">
 
-    <div style="margin-top:300px"class="w3-text-grey w3-container w3-center">
+    <div style="margin-top:300px" class="w3-text-grey w3-container w3-center">
       <h1>Soon Available :)</h1>
     </div>
     <!-- End Page Container -->
   </div>
-  <!--
-  <footer class="w3-container w3-teal w3-center w3-margin-top">
-  <p>Find me on social media.</p>
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer> -->
+
+
+
+  <footer style="position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  padding-top:20px;
+  padding-bottom:20px" class="w3-container w3-teal w3-center w3-margin-top">
+  <div style="margin:auto;width:20%" class="w3-cell-row w3-center">
+    <h5 class="w3-cell">Contact Me ! :</h5>
+    <div class="w3-cell">
+      <i class="fa fa-envelope w3-cell w3-hover-opacity"></i>
+      <button  style="background:none!important;border:none;font-size:15px" class="popup w3-text-white w3-hover-opacity" onclick="myFunction('romain.jacquier@insa-rouen.fr')">romain.jacquier@insa-rouen.fr
+        <span id="myPopup" class="popuptext" >Copied to Clipboard</span>
+      </button>
+    </div>
+    <!-- link to my linkedin profile -->
+    <a target="_blank" href="https://www.linkedin.com/in/romain-jacquier-71861114b/" style="color:white" class="w3-cell fa fa-linkedin"></a>
+
+  </div>
+</footer>
+<script>
+function myFunction(text) {
+  //create a fake textarea in order toselect and copy to clipboard
+  var textArea = document.createElement("textarea");
+  textArea.style.position = 'fixed';
+  textArea.style.top = 0;
+  textArea.style.left = 0;
+  textArea.style.width = '2em';
+  textArea.style.height = '2em';
+  textArea.style.padding = 0;
+
+  // Clean up any borders.
+  textArea.style.border = 'none';
+  textArea.style.outline = 'none';
+  textArea.style.boxShadow = 'none';
+
+  // Avoid flash of white box if rendered for any reason.
+  textArea.style.background = 'transparent';
+
+
+  textArea.value = text;
+
+
+  document.body.appendChild(textArea);
+
+  textArea.select();
+
+  document.execCommand("copy");
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+
 
 </body>
 </html>
