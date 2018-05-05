@@ -17,6 +17,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="./assets/img/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
+
+
+    <link href="./assets/img/flag-icon/assets/docs.css" rel="stylesheet">
+    <link href="./assets/img/flag-icon/css/flag-icon.css" rel="stylesheet">
     <link rel="manifest" href="./assets/img/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
@@ -131,6 +135,9 @@
 .colorPurple {
     background: #b955d6; 
 }
+.colorRed {
+    background: #B22222; 
+}
 
 .is-hidden {
     visibility: hidden;
@@ -180,7 +187,8 @@
                     <div class="container">
                         <div class="brand" align="right">
                             <h1>Hello !</h1>
-                            <h3>My name is <b>Romain Jacquier.</b><br/> I am a fourth-year (M1) student at <a style="color: white" title="link to INSA's page" href="www.insa-rouen.fr">INSA of Rouen Normandie university.</a> <br/>Scroll down to know more about me !</h3>
+                            
+                            <h3>My name is <b>Romain Jacquier.</b><br/> I am a fourth-year (M1) student at <a style="color: white" title="link to INSA's page" href="https://www.insa-rouen.fr">INSA of Rouen Normandie university.</a> <br/>Scroll down to know more about me !</h3>
                         </div>
                     </div>
                 </div>
@@ -194,198 +202,336 @@
     <div class="main main-raised">
 
         <div class="section section-basic">
+
             <div class="container">
-                <div class="title">
-                    <h2>My Profile</h2>
-                </div>
-
-                <div class="row page-content">  
-                    <div class="feature-box col-sm-6 col-xs-12">
-                        <div class="feature-box-1 pull-left color-2"><span><i class="fa fa-code myIcon colorOrange"></i></span></div>
-                        <div class="feature-box-2">
-                            <h3>I like IT science</h3>
-                            <p>I began to develop 4 years ago. I first learned basic algorithms, did a few mini-games.</p>
-                        </div>
-                    </div>
-                    <div class="feature-box col-sm-6 col-xs-12">
-                        <div class="feature-box-1 pull-left color-3"><span><i class="fa fa-android myIcon colorBlue"></i></span></div>
-                        <div class="feature-box-2">
-                            <h3>I like mobile and Web development</h3>
-                            <p>I learned on my own to develop Apps. I discovered a lot of frameworks: Cordova, Ionic, AngularJS</p>
-                        </div>
-                    </div>
-                    <div class="feature-box col-sm-6 col-xs-12">
-                        <div class="feature-box-1 pull-left color-4"><span><i class="fa fa-flask myIcon colorGrey"></i></span></div>
-                        <div class="feature-box-2">
-                            <h3>I like challenges</h3>
-                            <p>I liked to take part in a Hackathon last year. Furthermore, I went to the  <a href="http://www.coupederobotique.fr/">Annual French Robotic Cup in Roches-sur-Yon.</a></p>
-                        </div>
-                    </div>
-                    <div class="feature-box col-sm-6 col-xs-12">
-                        <div class="feature-box-1 pull-left color-5"><span><i class="fa fa-graduation-cap myIcon colorPurple"></i></span></div>
-                        <div class="feature-box-2">
-                            <h3>I like robotics</h3>
-                            <p>I integrated the Robotic association of INSA Rouen. I went to the  <a href="http://www.coupederobotique.fr/">Annual French Robotic Cup in Roches-sur-Yon.</a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <hr/>
-
-                <!--                 end buttons                 -->
-                <div class="space-50"></div>
-                <!--                 inputs -->
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
 
 
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
 
-                <section  id="experiences" class="page-wrapper light-bg" style="background-color:#E9ECEE">
-                    <div class="container">
-                        <div class="title-area">
-                            <h2 class="title">Last experiences</h2>
-                        </div>
-
-                        <div id="cd-timeline" class="cd-container cd-center">
-
-                            <div class="cd-timeline-block">
-                                <div class="cd-timeline-img cd-type-pro">
-                                    <i class="fa fa-users"></i>
-                                </div>  
-
-                                <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-timeline-content">
-                                    <h2>INSA Certified Project <a href="https://rgc4.wordpress.com/2018/03/05/pic/"><i class="fa fa-link"></i></a></h2>
-
-                                    <p class="subtitle"><a href="https://www.insa-rouen.fr/" title="National Institut of Applied Science">INSA Rouen</a>, <a href="http://asi.insa-rouen.fr/?language=en" title="ASI - Information Systems Architectures">IT Department - ASI</a> &amp; <a href="http://www.eivp-paris.fr/" title="EIVP Engineering School in Paris">City  of Paris</a> 
-                                    </p>
-
-                                    <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-date"><strong>Jan-2018 Jan-2019</strong> <span>Actual</span> </div>
-                                    <p>This is an 1-year project with 8 other Students. We work on a decision-making tool in case of flooding in Paris. Our direct client is the engineering school EIVP, but we also work with the RATP (the Operator of Parisian Transport.)
-                                        </  br>
-                                        My role in the project is developer. I am also in charge of the <b>network configuration</b> of the computers provided by the school.
-                                    </p>
-                                </div>
+                        <div class="carousel-item active">
+                            <div class="title">
+                                <h2>My Profile</h2>
                             </div>
-
-                            
-
-
-
-
-                            <div class="cd-timeline-block">
-                                <div class="cd-timeline-img cd-type-edu">
-                                    <i class="fa fa-flask"></i>
-                                </div>
-
-                                <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-timeline-content">
-                                    <h2>4th-year Student at INSA ROUEN</h2>
-                                    <p class="subtitle"><a href="https://www.insa-rouen.fr/" title="National Institut of Applied Science">INSA Rouen</a> &amp; <a href="http://asi.insa-rouen.fr/?language=en" title="ASI - Information Systems Architectures">IT Department - ASI</a>
-                                    </p>
-
-                                    <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-date">
-                                        <strong>2018</strong> <span>Actual</span>
+                            <div class="row page-content" style="height: 500px"> 
+                                <div class="feature-box col-sm-6 col-xs-12">
+                                    <div class="feature-box-1 pull-left color-2"><span><i class="fa fa-code myIcon colorOrange"></i></span></div>
+                                    <div class="feature-box-2">
+                                        <h3>I like IT science</h3>
+                                        <p>I began to develop 4 years ago. I first learned basic algorithms, did a few mini-games.</p>
                                     </div>
-
-                                    <p>
-                                        I am now : <b>1st year of a Master's program</b> - <em>Baccalaureate+4</em><br/>
-                                        Main subjects studied: 
-                                        <ul>
-                                            <li>Web</li>
-                                            <li>Data science</li>
-                                            <li>Electronic</li>
-                                            <li>Data Base</li>
-                                            <li>Algorithm</li>
-                                            <li>Project management</li>
-                                            <li>Quality</li>
-                                        </ul>
-                                    </p>
                                 </div>
-                            </div>
-
-                            <div class="cd-timeline-block">
-                                <div class="cd-timeline-img cd-type-pro">
-                                    <i class="fa fa-coffee"></i>
-                                </div>  
-
-                                <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-timeline-content">
-                                    <h2>Connected Coffee Machine (see on github : <a href="https://github.com/Koisell/SmartCoffeeMachine"><i class="fa fa-github"></i></a>)</h2>
-
-                                    <p class="subtitle"><a href="https://www.insa-rouen.fr/" title="National Institut of Applied Science">INSA Rouen</a> &amp; <a href="http://asi.insa-rouen.fr/?language=en" title="ASI - Information Systems Architectures">IT Department - ASI</a>
-                                    </p>
-
-                                    <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-date"><strong>2017-2018</strong></div>
-                                    <p>Project with an other student, within the IT Department of INSA of Rouen Normandie. Realizations:
-                                        <ul>
-                                            <li>Facial Recognition by means of a camera. (<b>OpenCv</b>)</li>
-                                            <li>Development of a documented <b>Api Rest </b>.</li>
-                                            <li>Electronic (Use of ultrasounds, and lights captors, circuit board).</li>
-                                            <li><b>Data Base</b> : User Management.</li>
-                                        </ul>
-                                    </p>
+                                <div class="feature-box col-sm-6 col-xs-12">
+                                    <div class="feature-box-1 pull-left color-3"><span><i class="fa fa-android myIcon colorBlue"></i></span></div>
+                                    <div class="feature-box-2">
+                                        <h3>I like mobile and Web development</h3>
+                                        <p>I learned on my own to develop Apps. I discovered a lot of frameworks: Cordova, Ionic, AngularJS</p>
+                                    </div>
+                                </div>
+                                <div class="feature-box col-sm-6 col-xs-12">
+                                    <div class="feature-box-1 pull-left color-4"><span><i class="fa fa-flask myIcon colorGrey"></i></span></div>
+                                    <div class="feature-box-2">
+                                        <h3>I like challenges</h3>
+                                        <p>I liked to take part in a Hackathon last year. Furthermore, I went to the  <a href="http://www.coupederobotique.fr/">Annual French Robotic Cup in Roches-sur-Yon.</a></p>
+                                    </div>
+                                </div>
+                                <div class="feature-box col-sm-6 col-xs-12">
+                                    <div class="feature-box-1 pull-left color-5"><span><i class="fa fa-graduation-cap myIcon colorPurple"></i></span></div>
+                                    <div class="feature-box-2">
+                                        <h3>I like robotics</h3>
+                                        <p>I integrated the Robotic association of INSA Rouen. I went to the  <a href="http://www.coupederobotique.fr/">Annual French Robotic Cup in Roches-sur-Yon.</a></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="cd-timeline-dot"></div>
-                        <div class="cd-timeline-dot"></div>
-                        <div class="cd-timeline-dot"></div>
 
-                        <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-center mrgtop30">
-                            <a class="btn btn-info btn-lg" href="/cvFr.html">More Informations <i class="fa fa-chevron-right"></i></a>
-                        </p>
-                    </section>
+                        <div class="carousel-item ">
 
-                    <div class="sharing-area text-center">
-                        <div class="row justify-content-center">
-                            <h3>Contact me !</h3>
+                            <div class="title">
+                                <h2>My Skills</h2>
+                            </div>
+                            <div class="row page-content" style="height: 500px">
+
+                                <div class="col-2">CSS/HTML/Javascript</div>
+                                <div class="col-10">
+                                    <div class="progress">
+                                        <div class="progress-bar colorGrey" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-2">JAVA</div>
+                                <div class="col-10">
+                                    <div class="progress">
+                                        <div class="progress-bar colorOrange" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-2">SQL</div>
+                                <div class="col-10">
+                                    <div class="progress">
+                                        <div class="progress-bar colorPurple" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-2">Python</div>
+                                <div class="col-10">
+                                    <div class="progress">
+                                        <div class="progress-bar colorBlue" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-2">C</div>
+                                <div class="col-10">
+                                    <div class="progress">
+                                        <div class="progress-bar colorRed" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <a style="background-color: #283e4a; text-transform: none;" class="btn btn-raised btn-twitter sharrre" href="https://www.linkedin.com/in/romain-jacquier-71861114b"/>
-                        <i class="fab fa-linkedin"></i> Linkedin
-                    </a>
-                    <a style="background-color: #365899; text-transform: none;" class="btn btn-raised btn-facebook sharrre" href="https://www.facebook.com/rom1jacquier">
-                        <i class="fa fa-facebook-square"></i> Facebook
-                    </a>
-                    <a style="background-color: #333333; text-transform: none;" href="https://github.com/Romainj1" target="_blank" class="btn btn-raised btn-github">
-                        <i class="fa fa-github"></i> GitHub
-                    </a>
-                    <button style="background-color: #e22421; text-transform: none;" onclick="myFunction('romain.jacquier@insa-rouen.fr')" target="_blank" class="btn btn-raised btn-github popup">
-                        <i class="fa fa-mail"></i> E-Mail (click)
-                        <span id="myPopup" class="popuptext" >E-Mail copied to Clipboard</span>
-                    </button>
 
-                </div> 
+                        <div class="carousel-item ">
+                            <div class="title">
+                                <h2>My Hobbies</h2>
+                            </div>
+                            <div class="row" style="height: 500px">
+                                <div class="col-sm-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">I'm a musician !</h5>
+                                            <p class="card-text">I have been playing the acoustic and electric guitar for over 13 years now. I have been part of numerous music groups. I am also a bassist player. I participated in the "Odyssée" musical spectacle. Furthermore, I also gave guitar courses for beginners.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">I love skiing !</h5>
+                                            <p class="card-text">I also love running and ultimate !</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 col-xs-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">I love traveling !</h5>
+                                            <div class="row">
+                                                <div class="col-lg-1 col-md-4 col-sm-4 col-xs-6">
+                                                    <div style="border-radius: 50%;" class="flag-wrapper">
+                                                        <div data-toggle="tooltip" data-placement="top" title="I live in France !" class="flag flag-icon-fr"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-1 col-md-4 col-sm-4 col-xs-6">
+                                                    <div style="border-radius: 50%;" class="flag-wrapper">
+                                                        <div data-toggle="tooltip" data-placement="top" title="I lived 4 years in Germany ! (200    6-2010)" class="flag flag-icon-de rounded"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-1 col-md-4 col-sm-4 col-xs-3">
+                                                    <div style="border-radius: 50%;" class="flag-wrapper">
+                                                        <div data-toggle="tooltip" data-placement="top" title="I went to London ! (2010)" class="flag  flag-icon-gb"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-1 col-md-4 col-sm-4 col-xs-3">
+                                                    <div style="border-radius: 50%;" class="flag-wrapper">
+                                                        <div data-toggle="tooltip" data-placement="top" title="A part of my family lives in Italy !" class="flag  flag-icon-it"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-1 col-md-4 col-sm-4 col-xs-3">
+                                                    <div style="border-radius: 50%;" class="flag-wrapper">
+                                                        <div data-toggle="tooltip" data-placement="top" title="I visited Budapest ! (2018)" class="flag  flag-icon-hu"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-1 col-md-4 col-sm-4 col-xs-3">
+                                                    <div style="border-radius: 50%;" class="flag-wrapper">
+                                                        <div data-toggle="tooltip" data-placement="top" title="I also visited Vienna ! (2018)" class="flag  flag-icon-at"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-1 col-md-4 col-sm-4 col-xs-3">
+                                                    <div style="border-radius: 50%;" class="flag-wrapper">
+                                                        <div data-toggle="tooltip" data-placement="top" title="Moreover I visited Bratislava ! (2018)" class="flag  flag-icon-sk"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-1 col-md-4 col-sm-4 col-xs-3">
+                                                    <div style="border-radius: 50%;" class="flag-wrapper">
+                                                        <div data-toggle="tooltip" data-placement="top" title="I visited Switzerland ! (2010)" class="flag  flag-icon-ch"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+
+            <hr/>
+
+            <div class="space-50"></div>
+
+            <section  id="experiences" class="page-wrapper light-bg" style="background-color:#E9ECEE">
+                <div class="container">
+                    <div class="title-area">
+                        <h2 class="title">Last experiences</h2>
+                    </div>
+
+                    <div id="cd-timeline" class="cd-container cd-center">
+
+                        <div class="cd-timeline-block">
+                            <div class="cd-timeline-img cd-type-pro">
+                                <i class="fa fa-users"></i>
+                            </div>  
+
+                            <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-timeline-content">
+                                <h2>INSA Certified Project <a href="https://rgc4.wordpress.com/2018/03/05/pic/"><i class="fa fa-link"></i></a></h2>
+
+                                <p class="subtitle"><a href="https://www.insa-rouen.fr/" title="National Institut of Applied Science">INSA Rouen</a>, <a href="http://asi.insa-rouen.fr/?language=en" title="ASI - Information Systems Architectures">IT Department - ASI</a> &amp; <a href="http://www.eivp-paris.fr/" title="EIVP Engineering School in Paris">City  of Paris</a> 
+                                </p>
+
+                                <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-date"><strong>Jan-2018 Jan-2019</strong> <span>Actual</span> </div>
+                                <p>This is an 1-year project with 8 other Students. We work on a decision-making tool in case of flooding in Paris. Our direct client is the engineering school EIVP, but we also work with the RATP (the Operator of Parisian Transport.)
+                                    </br>
+                                    My role in the project is developer. I am also in charge of the <b>network configuration</b> of the computers provided by the school.
+                                </p>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div class="cd-timeline-block">
+                            <div class="cd-timeline-img cd-type-edu">
+                                <i class="fa fa-flask"></i>
+                            </div>
+
+                            <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-timeline-content">
+                                <h2>4th-year Student at INSA ROUEN</h2>
+                                <p class="subtitle"><a href="https://www.insa-rouen.fr/" title="National Institut of Applied Science">INSA Rouen</a> &amp; <a href="http://asi.insa-rouen.fr/?language=en" title="ASI - Information Systems Architectures">IT Department - ASI</a>
+                                </p>
+
+                                <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-date">
+                                    <strong>2018</strong> <span>Actual</span>
+                                </div>
+
+                                <p>
+                                    I am now : <b>1st year of a Master's program</b> - <em>Baccalaureate+4</em><br/>
+                                    Main subjects studied: 
+                                    <ul>
+                                        <li>Web</li>
+                                        <li>Data science</li>
+                                        <li>Electronic</li>
+                                        <li>Data Base</li>
+                                        <li>Algorithm</li>
+                                        <li>Project management</li>
+                                        <li>Quality</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="cd-timeline-block">
+                            <div class="cd-timeline-img cd-type-pro">
+                                <i class="fa fa-coffee"></i>
+                            </div>  
+
+                            <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-timeline-content">
+                                <h2>Connected Coffee Machine (see on github : <a href="https://github.com/Koisell/SmartCoffeeMachine"><i class="fa fa-github"></i></a>)</h2>
+
+                                <p class="subtitle"><a href="https://www.insa-rouen.fr/" title="National Institut of Applied Science">INSA Rouen</a> &amp; <a href="http://asi.insa-rouen.fr/?language=en" title="ASI - Information Systems Architectures">IT Department - ASI</a>
+                                </p>
+
+                                <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-date"><strong>2017-2018</strong></div>
+                                <p>Project with an other student, within the IT Department of INSA of Rouen Normandie. Realizations:
+                                    <ul>
+                                        <li>Facial Recognition by means of a camera. (<b>OpenCv</b>)</li>
+                                        <li>Development of a documented <b>Api Rest </b>.</li>
+                                        <li>Electronic (Use of ultrasounds, and lights captors, circuit board).</li>
+                                        <li><b>Data Base</b> : User Management.</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cd-timeline-dot"></div>
+                    <div class="cd-timeline-dot"></div>
+                    <div class="cd-timeline-dot"></div>
+
+                    <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-center mrgtop30">
+                        <a class="btn btn-info btn-lg" href="/cvFr.html">More Informations <i class="fa fa-chevron-right"></i></a>
+                    </p>
+                </section>
+
+                <div class="sharing-area text-center">
+                    <div class="row justify-content-center">
+                        <h3>Contact me !</h3>
+                    </div>
+                    <a style="background-color: #283e4a; text-transform: none;" class="btn btn-raised btn-twitter sharrre" href="https://www.linkedin.com/in/romain-jacquier-71861114b"/>
+                    <i class="fab fa-linkedin"></i> Linkedin
+                </a>
+                <a style="background-color: #365899; text-transform: none;" class="btn btn-raised btn-facebook sharrre" href="https://www.facebook.com/rom1jacquier">
+                    <i class="fa fa-facebook-square"></i> Facebook
+                </a>
+                <a style="background-color: #333333; text-transform: none;" href="https://github.com/Romainj1" target="_blank" class="btn btn-raised btn-github">
+                    <i class="fa fa-github"></i> GitHub
+                </a>
+                <button style="background-color: #e22421; text-transform: none;" onclick="myFunction('romain.jacquier@insa-rouen.fr')" target="_blank" class="btn btn-raised btn-github popup">
+                    <i class="fa fa-mail"></i> E-Mail (click)
+                    <span id="myPopup" class="popuptext" >E-Mail copied to Clipboard</span>
+                </button>
+
+            </div> 
         </div>
-        <!-- Classic Modal -->
+    </div>
+    <!-- Classic Modal -->
 
-        <!--  End Modal -->
-        <footer class="footer ">
-            <div class="container">
-                <nav class="pull-left">
-                    <ul>
-                        <li>
-                            <a>
-                                Romain Jacquier
-                            </a>
-                        </li>
-                        <li>
-                            <a >
-                                Last modification : 24 March 2018
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </footer>
-        <!--   Core JS Files   -->
-        <script src="./assets/js/core/jquery.min.js"></script>
-        <script src="./assets/js/core/popper.min.js"></script>
-        <script src="./assets/js/bootstrap-material-design.js"></script>
-        <script src="./assets/js/plugins/moment.min.js"></script>
-        <script src="./assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
-        <script src="./assets/js/plugins/nouislider.min.js"></script>
-        <script src="./assets/js/material-kit.js?v=2.0.2"></script>
-        <script src="./assets/assets-for-demo/js/material-kit-demo.js"></script>
-        <script>
-            $(document).ready(function() {
+    <!--  End Modal -->
+    <footer class="footer ">
+        <div class="container">
+            <nav class="pull-left">
+                <ul>
+                    <li>
+                        <a>
+                            Romain Jacquier
+                        </a>
+                    </li>
+                    <li>
+                        <a >
+                            Last modification : 05 May 2018
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <!--   Core JS Files   -->
+    <script src="./assets/js/core/jquery.min.js"></script>
+    <script src="./assets/js/core/popper.min.js"></script>
+    <script src="./assets/js/bootstrap-material-design.js"></script>
+    <script src="./assets/js/plugins/moment.min.js"></script>
+    <script src="./assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+    <script src="./assets/js/plugins/nouislider.min.js"></script>
+    <script src="./assets/js/material-kit.js?v=2.0.2"></script>
+    <script src="./assets/assets-for-demo/js/material-kit-demo.js"></script>
+    <script>
+        $(document).ready(function() {
 
             //init DateTimePickers
             materialKit.initFormExtendedDatetimepickers();
@@ -498,10 +644,10 @@
 </script>
 <script src="./AOS/dist/aos.js"></script>
 <script>
-      AOS.init({
-        easing: 'ease-in-out-sine'
-      });
-    </script>
+  AOS.init({
+    easing: 'ease-in-out-sine'
+});
+</script>
 </body>
 
 </html> 
