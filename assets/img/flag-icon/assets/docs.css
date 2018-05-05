@@ -134,7 +134,7 @@ footer {
   text-align: center;
   opacity: .8;
   padding: 50px;
-  background: linear-gradient(to right, #f4c01a, #0d6632);
+  //background: linear-gradient(to right, #f4c01a, #0d6632);
 }
 footer a {
   color: #fff;
