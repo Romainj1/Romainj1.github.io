@@ -28,11 +28,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./assets/css/material-kit.css?v=2.0.2">
     <!-- Documentation extras -->
-    <!-- CSS Just for demo purpose, don't include it in your project -->
-    <link href="./assets/assets-for-demo/demo.css" rel="stylesheet" />
+<!-- 
+    <script src='bower_components/dyn-css/dyncss.js' type='text/javascript'/> -->
+    
 
 
 
+
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <link rel='stylesheet' id='thm-style-css'  href='./assets/css/my.css' type='text/css' media='all' />
 
 </head>
@@ -48,8 +52,12 @@
   user-select: none;
 }
 
-/* The actual popup */
-.popup .popuptext {
+/*.header {
+ -dyn-margin-top: '(@win-height - @el-height)/2.0';
+ }*/
+
+ /* The actual popup */
+ .popup .popuptext {
   visibility: hidden;
   width: 160px;
   background-color: #555;
@@ -231,7 +239,7 @@
 
 
 
-                <section id="experiences" class="page-wrapper light-bg" style="background-color:#E9ECEE">
+                <section  id="experiences" class="page-wrapper light-bg" style="background-color:#E9ECEE">
                     <div class="container">
                         <div class="title-area">
                             <h2 class="title">Last experiences</h2>
@@ -244,19 +252,22 @@
                                     <i class="fa fa-users"></i>
                                 </div>  
 
-                                <div class="cd-timeline-content">
+                                <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-timeline-content">
                                     <h2>INSA Certified Project <a href="https://rgc4.wordpress.com/2018/03/05/pic/"><i class="fa fa-link"></i></a></h2>
 
                                     <p class="subtitle"><a href="https://www.insa-rouen.fr/" title="National Institut of Applied Science">INSA Rouen</a>, <a href="http://asi.insa-rouen.fr/?language=en" title="ASI - Information Systems Architectures">IT Department - ASI</a> &amp; <a href="http://www.eivp-paris.fr/" title="EIVP Engineering School in Paris">City  of Paris</a> 
                                     </p>
 
-                                    <div class="cd-date"><strong>Jan-2018 Jan-2019</strong> <span>Actual</span> </div>
+                                    <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-date"><strong>Jan-2018 Jan-2019</strong> <span>Actual</span> </div>
                                     <p>This is an 1-year project with 8 other Students. We work on a decision-making tool in case of flooding in Paris. Our direct client is the engineering school EIVP, but we also work with the RATP (the Operator of Parisian Transport.)
                                         </  br>
                                         My role in the project is developer. I am also in charge of the <b>network configuration</b> of the computers provided by the school.
                                     </p>
                                 </div>
                             </div>
+
+                            
+
 
 
 
@@ -265,12 +276,12 @@
                                     <i class="fa fa-flask"></i>
                                 </div>
 
-                                <div class="cd-timeline-content">
+                                <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-timeline-content">
                                     <h2>4th-year Student at INSA ROUEN</h2>
                                     <p class="subtitle"><a href="https://www.insa-rouen.fr/" title="National Institut of Applied Science">INSA Rouen</a> &amp; <a href="http://asi.insa-rouen.fr/?language=en" title="ASI - Information Systems Architectures">IT Department - ASI</a>
                                     </p>
 
-                                    <div class="cd-date">
+                                    <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-date">
                                         <strong>2018</strong> <span>Actual</span>
                                     </div>
 
@@ -295,13 +306,13 @@
                                     <i class="fa fa-coffee"></i>
                                 </div>  
 
-                                <div class="cd-timeline-content">
+                                <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-timeline-content">
                                     <h2>Connected Coffee Machine (see on github : <a href="https://github.com/Koisell/SmartCoffeeMachine"><i class="fa fa-github"></i></a>)</h2>
 
                                     <p class="subtitle"><a href="https://www.insa-rouen.fr/" title="National Institut of Applied Science">INSA Rouen</a> &amp; <a href="http://asi.insa-rouen.fr/?language=en" title="ASI - Information Systems Architectures">IT Department - ASI</a>
                                     </p>
 
-                                    <div class="cd-date"><strong>2017-2018</strong></div>
+                                    <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-date"><strong>2017-2018</strong></div>
                                     <p>Project with an other student, within the IT Department of INSA of Rouen Normandie. Realizations:
                                         <ul>
                                             <li>Facial Recognition by means of a camera. (<b>OpenCv</b>)</li>
@@ -314,12 +325,12 @@
                             </div>
                         </div>
                         <div class="cd-timeline-dot"></div>
-                            <div class="cd-timeline-dot"></div>
-                            <div class="cd-timeline-dot"></div>
+                        <div class="cd-timeline-dot"></div>
+                        <div class="cd-timeline-dot"></div>
 
-                            <p class="text-center mrgtop30">
-                                <a class="btn btn-info btn-lg" href="/cv/#experiences">More Informations <i class="fa fa-chevron-right"></i></a>
-                            </p>
+                        <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-center mrgtop30">
+                            <a class="btn btn-info btn-lg" href="/cvFr.html">More Informations <i class="fa fa-chevron-right"></i></a>
+                        </p>
                     </section>
 
                     <div class="sharing-area text-center">
@@ -485,6 +496,12 @@
     popup.classList.toggle("show");
 }
 </script>
+<script src="./AOS/dist/aos.js"></script>
+<script>
+      AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+    </script>
 </body>
 
 </html> 
