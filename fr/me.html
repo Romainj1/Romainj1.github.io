@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link rel="apple-touch-icon" sizes="57x57" href="./assets/img/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="./assets/img/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="./assets/img/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="./assets/img/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./assets/img/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="./assets/img/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./assets/img/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="./assets/img/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="./assets/img/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
 
 
-    <link href="./assets/img/flag-icon/assets/docs.css" rel="stylesheet">
-    <link href="./assets/img/flag-icon/css/flag-icon.css" rel="stylesheet">
-    <link rel="manifest" href="./assets/img/favicon/manifest.json">
+    <link href="../assets/img/flag-icon/assets/docs.css" rel="stylesheet">
+    <link href="../assets/img/flag-icon/css/flag-icon.css" rel="stylesheet">
+    <link rel="manifest" href="../assets/img/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <title>
@@ -30,7 +30,7 @@
     <!--     Fonts and icons     -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="./assets/css/material-kit.css?v=2.0.2">
+    <link rel="stylesheet" href="../assets/css/material-kit.css?v=2.0.2">
     <!-- Documentation extras -->
 <!-- 
     <script src='bower_components/dyn-css/dyncss.js' type='text/javascript'/> -->
@@ -41,7 +41,7 @@
 
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    <link rel='stylesheet' id='thm-style-css'  href='./assets/css/my.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='thm-style-css'  href='../assets/css/my.css' type='text/css' media='all' />
 
 </head>
 <style type="text/css">
@@ -56,12 +56,16 @@
   user-select: none;
 }
 
-/*.header {
- -dyn-margin-top: '(@win-height - @el-height)/2.0';
- }*/
+/* Im Style werden alle .lang-Elemente erstmal ausgeblendet. */
+.fr, .en {
+    display : none;
+}
+:lang(fr) .fr,:lang(en) .en{
+    display: block;
+}
 
- /* The actual popup */
- .popup .popuptext {
+/* The actual popup */
+.popup .popuptext {
   visibility: hidden;
   width: 160px;
   background-color: #555;
@@ -148,12 +152,23 @@
     <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav">
         <div class="container">
             <div class="navbar-translate">
-                <a class="navbar-brand" href="./cvEng.html">Link to my CV</a>
+                <h4>Langues : 
+                    <a href="../fr/me.html">
+                        <span data-toggle="tooltip" data-placement="bottom" title="Français" class="flag-icon flag-icon-fr"></span>
+                    </a>
+                    <a href="../en/me.html">
+                        <span data-toggle="tooltip" data-placement="bottom" title="English" class="flag-icon flag-icon-gb"></span>
+                    </a>
+                    <a href="../de/me.html">
+                        <span data-toggle="tooltip" data-placement="bottom" title="Deutsch" class="flag-icon flag-icon-de"></span>
+                    </a>
+                </h4>
+                <!-- <a class="navbar-brand" href="./cv.html">Voir mon CV</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     <span class="navbar-toggler-icon"></span>
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button> -->
             </div>
 
             <div class="collapse navbar-collapse">
@@ -169,8 +184,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://github.com/Romainj1CreativeTimOfficial" target="_blank" data-original-title="Take a look at my github">
+                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://github.com/Romainj1" target="_blank" data-original-title="Take a look at my github">
                             <i class="fa fa-github"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="./cv.html" target="_blank" data-original-title="Voir mon CV !">
+                            <h4>CV</h4>
                         </a>
                     </li>
                 </ul>
@@ -180,21 +200,21 @@
     </nav>
 
 
-    <div class="page-header header-filter clear-filter purple-filter" data-parallax="true" style="background-image: url('assets/img/kit/computer.jpg');">
+    <div class="page-header header-filter clear-filter purple-filter" data-parallax="true" style="background-image: url('../assets/img/kit/computer.jpg');">
         <div class="container">
             <div class="row page-content">
                 <div class="feature-box col-sm-8">
                     <div class="container">
                         <div class="brand" align="right">
-                            <h1>Hello !</h1>
+                            <h1>Bonjour !</h1>
                             
-                            <h3>My name is <b>Romain Jacquier.</b><br/> I am a fourth-year (M1) student at <a style="color: white" title="link to INSA's page" href="https://www.insa-rouen.fr">INSA of Rouen Normandie university.</a> <br/>Scroll down to know more about me !</h3>
+                            <h3>Je m'appelle est <b>Romain Jacquier.</b><br/> Je suis élève-ingénieur à l'<a style="color: white" title="link to INSA's page" href="https://www.insa-rouen.fr">INSA de Rouen Normandie.</a> <br/>Défilez pour en apprendre plus sur moi !</h3>
                         </div>
                     </div>
                 </div>
 
                 <div style="align-self: center;" class="feature-box col-sm-4">
-                    <img style=" border-radius: 50%;" src="./assets/img/favicon.png"/>
+                    <img style=" border-radius: 50%;" src="../assets/img/favicon.png"/>
                 </div>
             </div>
         </div>
@@ -219,35 +239,35 @@
 
                         <div class="carousel-item active">
                             <div class="title">
-                                <h2>My Profile</h2>
+                                <h2>Mon profil</h2>
                             </div>
                             <div class="row page-content" style="height: 500px"> 
                                 <div class="feature-box col-sm-6 col-xs-12">
                                     <div class="feature-box-1 pull-left color-2"><span><i class="fa fa-code myIcon colorOrange"></i></span></div>
                                     <div class="feature-box-2">
-                                        <h3>I like IT science</h3>
-                                        <p>I began to develop 4 years ago. I first learned basic algorithms, did a few mini-games.</p>
+                                        <h3>J'aime l'informatique</h3>
+                                        <p>J'ai commencé à developper, il y a 4 ans. J'ai d'abord appris des algorithmes de base et conçu quelques jeux.</p>
                                     </div>
                                 </div>
                                 <div class="feature-box col-sm-6 col-xs-12">
                                     <div class="feature-box-1 pull-left color-3"><span><i class="fa fa-android myIcon colorBlue"></i></span></div>
                                     <div class="feature-box-2">
-                                        <h3>I like mobile and Web development</h3>
-                                        <p>I learned on my own to develop Apps. I discovered a lot of frameworks: Cordova, Ionic, AngularJS</p>
+                                        <h3>J'aime le développement Web et Mobile</h3>
+                                        <p>J'ai appris moi-même à developper sur mobile. J'ai découvert de nombreux Frameworks: Cordova, Ionic, AngularJS</p>
                                     </div>
                                 </div>
                                 <div class="feature-box col-sm-6 col-xs-12">
                                     <div class="feature-box-1 pull-left color-4"><span><i class="fa fa-flask myIcon colorGrey"></i></span></div>
                                     <div class="feature-box-2">
-                                        <h3>I like challenges</h3>
-                                        <p>I liked to take part in a Hackathon last year. Furthermore, I went to the  <a href="http://www.coupederobotique.fr/">Annual French Robotic Cup in Roches-sur-Yon.</a></p>
+                                        <h3>J'aime les challenges</h3>
+                                        <p>J'ai participé à un Hackathon en novembre dernier. De plus, je suis allé à la  <a href="http://www.coupederobotique.fr/">Coupe annuelle de Robotique à la Roches-sur-Yon.</a></p>
                                     </div>
                                 </div>
                                 <div class="feature-box col-sm-6 col-xs-12">
                                     <div class="feature-box-1 pull-left color-5"><span><i class="fa fa-graduation-cap myIcon colorPurple"></i></span></div>
                                     <div class="feature-box-2">
-                                        <h3>I like robotics</h3>
-                                        <p>I integrated the Robotic association of INSA Rouen. I went to the  <a href="http://www.coupederobotique.fr/">Annual French Robotic Cup in Roches-sur-Yon.</a></p>
+                                        <h3>J'aime la robotique</h3>
+                                        <p>J'ai intégré l'association de robotique de l'INSA de Rouen (ARI). J'en suis actuellement le secrétaire</p>
                                     </div>
                                 </div>
                             </div>
@@ -256,7 +276,7 @@
                         <div class="carousel-item ">
 
                             <div class="title">
-                                <h2>My Skills</h2>
+                                <h2>Mes Compétences</h2>
                             </div>
                             <div class="row page-content" style="height: 500px">
 
@@ -299,74 +319,74 @@
 
                         <div class="carousel-item ">
                             <div class="title">
-                                <h2>My Hobbies</h2>
+                                <h2>Mes Loisirs</h2>
                             </div>
                             <div class="row" style="height: 500px">
                                 <div class="col-sm-6">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title">I'm a musician !</h5>
-                                            <p class="card-text">I have been playing the acoustic and electric guitar for over 13 years now. I have been part of numerous music groups. I am also a bassist player. I participated in the "Odyssée" musical spectacle. Furthermore, I also gave guitar courses for beginners.</p>
+                                            <h5 class="card-title">Je suis Musicien !</h5>
+                                            <p class="card-text">Je joue de la guitare classique et électrique depuis plus de 13 ans. J'ai ainsi intégré de nombreux groupes. Je suis également joueur de basse, et de piano. J'ai participé au spectacle musical l'Odyssée. De plus, j'ai donné des cours de guitare pour débutant.</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title">I love skiing !</h5>
-                                            <p class="card-text">I also love running and ultimate !</p>
+                                            <h5 class="card-title">J'adore skier !</h5>
+                                            <p class="card-text">J'aime également l'Ultimate et courir.</p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="col-sm-12 col-xs-6">
+                                <div class="col-sm-11 col-xs-6">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h5 class="card-title">I love traveling !</h5>
+                                            <h5 class="card-title">J'aime voyager !</h5>
                                             <div class="row">
                                                 <div class="col-lg-1 col-md-4 col-sm-4 col-xs-6">
                                                     <div style="border-radius: 50%;" class="flag-wrapper">
-                                                        <div data-toggle="tooltip" data-placement="top" title="I live in France !" class="flag flag-icon-fr"></div>
+                                                        <div data-toggle="tooltip" data-placement="top" title="Je vis in France !" class="flag flag-icon-fr"></div>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-1 col-md-4 col-sm-4 col-xs-6">
                                                     <div style="border-radius: 50%;" class="flag-wrapper">
-                                                        <div data-toggle="tooltip" data-placement="top" title="I lived 4 years in Germany ! (200    6-2010)" class="flag flag-icon-de rounded"></div>
+                                                        <div data-toggle="tooltip" data-placement="top" title="J'ai vécu 4 ans à Munich ! (2006-2010)" class="flag flag-icon-de rounded"></div>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-1 col-md-4 col-sm-4 col-xs-3">
                                                     <div style="border-radius: 50%;" class="flag-wrapper">
-                                                        <div data-toggle="tooltip" data-placement="top" title="I went to London ! (2010)" class="flag  flag-icon-gb"></div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-lg-1 col-md-4 col-sm-4 col-xs-3">
-                                                    <div style="border-radius: 50%;" class="flag-wrapper">
-                                                        <div data-toggle="tooltip" data-placement="top" title="A part of my family lives in Italy !" class="flag  flag-icon-it"></div>
+                                                        <div data-toggle="tooltip" data-placement="top" title="J'ai déjà visité Londres (2010)" class="flag  flag-icon-gb"></div>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-lg-1 col-md-4 col-sm-4 col-xs-3">
                                                     <div style="border-radius: 50%;" class="flag-wrapper">
-                                                        <div data-toggle="tooltip" data-placement="top" title="I visited Budapest ! (2018)" class="flag  flag-icon-hu"></div>
+                                                        <div data-toggle="tooltip" data-placement="top" title="Une partie de ma famille vie en Italy !" class="flag flag-icon-it"></div>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-lg-1 col-md-4 col-sm-4 col-xs-3">
                                                     <div style="border-radius: 50%;" class="flag-wrapper">
-                                                        <div data-toggle="tooltip" data-placement="top" title="I also visited Vienna ! (2018)" class="flag  flag-icon-at"></div>
+                                                        <div data-toggle="tooltip" data-placement="top" title="J'ai visité Budapest (2018)" class="flag  flag-icon-hu"></div>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-lg-1 col-md-4 col-sm-4 col-xs-3">
                                                     <div style="border-radius: 50%;" class="flag-wrapper">
-                                                        <div data-toggle="tooltip" data-placement="top" title="Moreover I visited Bratislava ! (2018)" class="flag  flag-icon-sk"></div>
+                                                        <div data-toggle="tooltip" data-placement="top" title="J'ai également visité Vienne ! (2018)" class="flag  flag-icon-at"></div>
                                                     </div>
                                                 </div>
 
                                                 <div class="col-lg-1 col-md-4 col-sm-4 col-xs-3">
                                                     <div style="border-radius: 50%;" class="flag-wrapper">
-                                                        <div data-toggle="tooltip" data-placement="top" title="I visited Switzerland ! (2010)" class="flag  flag-icon-ch"></div>
+                                                        <div data-toggle="tooltip" data-placement="top" title="De plus j'ai visité Bratislava ! (2018)" class="flag  flag-icon-sk"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-1 col-md-4 col-sm-4 col-xs-3">
+                                                    <div style="border-radius: 50%;" class="flag-wrapper">
+                                                        <div data-toggle="tooltip" data-placement="top" title="Je suis allé en Suisse ! (2010)" class="flag  flag-icon-ch"></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -388,7 +408,7 @@
             <section  id="experiences" class="page-wrapper light-bg" style="background-color:#E9ECEE">
                 <div class="container">
                     <div class="title-area">
-                        <h2 class="title">Last experiences</h2>
+                        <h2 class="title">Dernières expériences :</h2>
                     </div>
 
                     <div id="cd-timeline" class="cd-container cd-center">
@@ -399,139 +419,136 @@
                             </div>  
 
                             <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-timeline-content">
-                                <h2>INSA Certified Project <a href="https://rgc4.wordpress.com/2018/03/05/pic/"><i class="fa fa-link"></i></a></h2>
+                                <h2>Projet INSA Certifié (PIC)<a href="https://rgc4.wordpress.com/2018/03/05/pic/"><i class="fa fa-link"></i></a></h2>
 
-                                <p class="subtitle"><a href="https://www.insa-rouen.fr/" title="National Institut of Applied Science">INSA Rouen</a>, <a href="http://asi.insa-rouen.fr/?language=en" title="ASI - Information Systems Architectures">IT Department - ASI</a> &amp; <a href="http://www.eivp-paris.fr/" title="EIVP Engineering School in Paris">City  of Paris</a> 
+                                <p class="subtitle"><a href="https://www.insa-rouen.fr/" title="Institut National des Sciences Appliquées">INSA Rouen</a>, <a href="http://asi.insa-rouen.fr/?language=en" title="ASI - Architectures des Systèmes d'Information">Départment d'Informatique - ASI</a> &amp; <a href="http://www.eivp-paris.fr/" title="EIVP Ecole d'Ingénieurs de la Ville de Paris">Ville De Paris</a> 
                                 </p>
 
-                                <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-date"><strong>Jan-2018 Jan-2019</strong> <span>Actual</span> </div>
-                                <p>This is an 1-year project with 8 other Students. We work on a decision-making tool in case of flooding in Paris. Our direct client is the engineering school EIVP, but we also work with the RATP (the Operator of Parisian Transport.)
-                                    </br>
-                                    My role in the project is developer. I am also in charge of the <b>network configuration</b> of the computers provided by the school.
-                                </p>
-                            </div>
-                        </div>
-
-
-
-
-
-
-                        <div class="cd-timeline-block">
-                            <div class="cd-timeline-img cd-type-edu">
-                                <i class="fa fa-flask"></i>
-                            </div>
-
-                            <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-timeline-content">
-                                <h2>4th-year Student at INSA ROUEN</h2>
-                                <p class="subtitle"><a href="https://www.insa-rouen.fr/" title="National Institut of Applied Science">INSA Rouen</a> &amp; <a href="http://asi.insa-rouen.fr/?language=en" title="ASI - Information Systems Architectures">IT Department - ASI</a>
-                                </p>
-
-                                <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-date">
-                                    <strong>2018</strong> <span>Actual</span>
-                                </div>
-
-                                <p>
-                                    I am now : <b>1st year of a Master's program</b> - <em>Baccalaureate+4</em><br/>
-                                    Main subjects studied: 
-                                    <ul>
-                                        <li>Web</li>
-                                        <li>Data science</li>
-                                        <li>Electronic</li>
-                                        <li>Data Base</li>
-                                        <li>Algorithm</li>
-                                        <li>Project management</li>
-                                        <li>Quality</li>
-                                    </ul>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="cd-timeline-block">
-                            <div class="cd-timeline-img cd-type-pro">
-                                <i class="fa fa-coffee"></i>
-                            </div>  
-
-                            <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-timeline-content">
-                                <h2>Connected Coffee Machine (see on github : <a href="https://github.com/Koisell/SmartCoffeeMachine"><i class="fa fa-github"></i></a>)</h2>
-
-                                <p class="subtitle"><a href="https://www.insa-rouen.fr/" title="National Institut of Applied Science">INSA Rouen</a> &amp; <a href="http://asi.insa-rouen.fr/?language=en" title="ASI - Information Systems Architectures">IT Department - ASI</a>
-                                </p>
-
-                                <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-date"><strong>2017-2018</strong></div>
-                                <p>Project with an other student, within the IT Department of INSA of Rouen Normandie. Realizations:
-                                    <ul>
-                                        <li>Facial Recognition by means of a camera. (<b>OpenCv</b>)</li>
-                                        <li>Development of a documented <b>Api Rest </b>.</li>
-                                        <li>Electronic (Use of ultrasounds, and lights captors, circuit board).</li>
-                                        <li><b>Data Base</b> : User Management.</li>
-                                    </ul>
-                                </p>
-                            </div>
+                                <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-date"><strong>Jan-2018 Jan-2019</strong> <span>Actuellement</span> </div>
+                                <p>Ce projet, sur une année scolaire, consiste à travailler sur la réaffectation des agents RATP en cas de crue de la Seine. 
+                                    L’objectif est de réaliser un outil d’aide à la décision pour optimiser la réaffectation des agents au sein des différents sites du gestionnaire étudié afin de limiter les déplacements domicile-travail, et de proposer des couloirs de circulation privilégiés pour les reports de trafic.
+                                    Ce projet est effectué dans le cadre d’une <b>certification ISO 9001.</b>
+                                </br>
+                                Mon rôle dans ce projet est developpeur. Je suis également en charge de la <b>Configuration du Réseau</b> des outils informatiques que nous utilisons.
+                            </p>
                         </div>
                     </div>
-                    <div class="cd-timeline-dot"></div>
-                    <div class="cd-timeline-dot"></div>
-                    <div class="cd-timeline-dot"></div>
 
-                    <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-center mrgtop30">
-                        <a class="btn btn-info btn-lg" href="/cvFr.html">More Informations <i class="fa fa-chevron-right"></i></a>
-                    </p>
-                </section>
+                    <div class="cd-timeline-block">
+                        <div class="cd-timeline-img cd-type-edu">
+                            <i class="fa fa-flask"></i>
+                        </div>
 
-                <div class="sharing-area text-center">
-                    <div class="row justify-content-center">
-                        <h3>Contact me !</h3>
+                        <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-timeline-content">
+                            <h2>Etudiant en 4ème année</h2>
+                            <p class="subtitle"><a href="https://www.insa-rouen.fr/" title="Institut National des Sciences Appliquées">INSA Rouen</a> &amp; <a href="http://asi.insa-rouen.fr/?language=en" title="ASI - Architectures des Systèmes d'Information">Départment d'Informatique - ASI</a>
+                            </p>
+
+                            <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-date">
+                                <strong>2018</strong> <span>Actuellement</span>
+                            </div>
+
+                            <p>
+                                Je suis actuellement en 1ère année de Master : <em>Baccalaureate+4</em><br/>
+                                Principaux domaines étudiés :
+                                <ul>
+                                    <li>Web</li>
+                                    <li>Data science</li>
+                                    <li>Electronique</li>
+                                    <li>Base de Données</li>
+                                    <li>Algorithme</li>
+                                    <li>Management de projets</li>
+                                    <li>Qulitée</li>
+                                </ul>
+                            </p>
+                        </div>
                     </div>
-                    <a style="background-color: #283e4a; text-transform: none;" class="btn btn-raised btn-twitter sharrre" href="https://www.linkedin.com/in/romain-jacquier-71861114b"/>
-                    <i class="fab fa-linkedin"></i> Linkedin
-                </a>
-                <a style="background-color: #365899; text-transform: none;" class="btn btn-raised btn-facebook sharrre" href="https://www.facebook.com/rom1jacquier">
-                    <i class="fa fa-facebook-square"></i> Facebook
-                </a>
-                <a style="background-color: #333333; text-transform: none;" href="https://github.com/Romainj1" target="_blank" class="btn btn-raised btn-github">
-                    <i class="fa fa-github"></i> GitHub
-                </a>
-                <button style="background-color: #e22421; text-transform: none;" onclick="myFunction('romain.jacquier@insa-rouen.fr')" target="_blank" class="btn btn-raised btn-github popup">
-                    <i class="fa fa-mail"></i> E-Mail (click)
-                    <span id="myPopup" class="popuptext" >E-Mail copied to Clipboard</span>
-                </button>
 
-            </div> 
-        </div>
+                    <div class="cd-timeline-block">
+                        <div class="cd-timeline-img cd-type-pro">
+                            <i class="fa fa-coffee"></i>
+                        </div>  
+
+                        <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-timeline-content">
+                            <h2>Cafetière connectée (voir sur github : <a href="https://github.com/Koisell/SmartCoffeeMachine"><i class="fa fa-github"></i></a>)</h2>
+
+                            <p class="subtitle"><a href="https://www.insa-rouen.fr/" title="Institut National des Sciences Appliquées">INSA Rouen</a> &amp; <a href="http://asi.insa-rouen.fr/?language=en" title="ASI - Architectures des Systèmes d'Information">Départment d'Informatique - ASI</a>
+                            </p>
+
+                            <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-date"><strong>2017-2018</strong><span>Actuellement</span> </div>
+                            <p>Projet avec un autre étudiant, au sein du département d'informatique de l'INSA de Rouen (ASI). Réalisations:
+                                <ul>
+                                  <li>Reconnaissance faciale grâce à une caméra. (<b>OpenCv</b>)</li>
+                                  <li>Développement d'une <b>Api Rest </b>documentée.</li>
+                                  <li>Electronique (Capteur, circuit imprimé).</li>
+                                  <li><b>Base de données</b> : Gestion Utilisateur.</li>
+                              </ul>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="cd-timeline-dot"></div>
+              <div class="cd-timeline-dot"></div>
+              <div class="cd-timeline-dot"></div>
+
+              <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-center mrgtop30">
+                <a class="btn btn-info btn-lg" href="./cv.html">Plus d'informations <i class="fa fa-chevron-right"></i></a>
+            </p>
+        </section>
+
+        <div class="sharing-area text-center">
+            <div class="row justify-content-center">
+                <h3>Contact me !</h3>
+            </div>
+            <a style="background-color: #283e4a; text-transform: none;" class="btn btn-raised btn-twitter sharrre" href="https://www.linkedin.com/in/romain-jacquier-71861114b"/>
+            <i class="fab fa-linkedin"></i> Linkedin
+        </a>
+        <a style="background-color: #365899; text-transform: none;" class="btn btn-raised btn-facebook sharrre" href="https://www.facebook.com/rom1jacquier">
+            <i class="fa fa-facebook-square"></i> Facebook
+        </a>
+        <a style="background-color: #333333; text-transform: none;" href="https://github.com/Romainj1" target="_blank" class="btn btn-raised btn-github">
+            <i class="fa fa-github"></i> GitHub
+        </a>
+        <button style="background-color: #e22421; text-transform: none;" onclick="myFunction('romain.jacquier@insa-rouen.fr')" target="_blank" class="btn btn-raised btn-github popup">
+            <i class="fa fa-mail"></i> E-Mail (click)
+            <span id="myPopup" class="popuptext">E-Mail copié</span>
+        </button>
+
+    </div> 
+</div>
+</div>
+<!-- Classic Modal -->
+
+<!--  End Modal -->
+<footer class="footer ">
+    <div class="container">
+        <nav class="pull-left">
+            <ul>
+                <li>
+                    <a>
+                        Romain Jacquier
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        Dernières Modifications : 06 Mai 2018
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
-    <!-- Classic Modal -->
-
-    <!--  End Modal -->
-    <footer class="footer ">
-        <div class="container">
-            <nav class="pull-left">
-                <ul>
-                    <li>
-                        <a>
-                            Romain Jacquier
-                        </a>
-                    </li>
-                    <li>
-                        <a >
-                            Last modification : 05 May 2018
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </footer>
-    <!--   Core JS Files   -->
-    <script src="./assets/js/core/jquery.min.js"></script>
-    <script src="./assets/js/core/popper.min.js"></script>
-    <script src="./assets/js/bootstrap-material-design.js"></script>
-    <script src="./assets/js/plugins/moment.min.js"></script>
-    <script src="./assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
-    <script src="./assets/js/plugins/nouislider.min.js"></script>
-    <script src="./assets/js/material-kit.js?v=2.0.2"></script>
-    <script src="./assets/assets-for-demo/js/material-kit-demo.js"></script>
-    <script>
-        $(document).ready(function() {
+</footer>
+<!--   Core JS Files   -->
+<script src="../assets/js/core/jquery.min.js"></script>
+<script src="../assets/js/core/popper.min.js"></script>
+<script src="../assets/js/bootstrap-material-design.js"></script>
+<script src="../assets/js/plugins/moment.min.js"></script>
+<script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+<script src="../assets/js/plugins/nouislider.min.js"></script>
+<script src="../assets/js/material-kit.js?v=2.0.2"></script>
+<script src="../assets/assets-for-demo/js/material-kit-demo.js"></script>
+<script>
+    $(document).ready(function() {
 
             //init DateTimePickers
             materialKit.initFormExtendedDatetimepickers();
@@ -642,7 +659,7 @@
     popup.classList.toggle("show");
 }
 </script>
-<script src="./AOS/dist/aos.js"></script>
+<script src="../AOS/dist/aos.js"></script>
 <script>
   AOS.init({
     easing: 'ease-in-out-sine'
