@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Snake</title>
+    <style>
+    body {
+        align-content: center;
+        align-items: center;
+        background: #202020;
+        display: flex;
+        margin: 0;
+    }
+    canvas {
+        border: none
+        image-rendering: pixelated;
+        width: 40%;
+        margin : 0 auto;
+    }
+    </style>
+</head>
+<body>
+    <canvas id="snake" width="625" height="625" />
+</body>
+
+<script type="text/javascript">
+window.onload=function(){
+    canvas = document.getElementById("snake");
+    // canvas.width = window.innerWidth;
+    // canvas.height = window.innerHeight;
+    canvasContext = canvas.getContext("2d");
+    document.addEventListener("keydown", keyPush);
+    setInterval(game,1000/15);
+}
+
+vitesseX=vitesseY=0;
+positionX=positionY=20;
+bonusX=bonusY=15;
+tail = 5;
+trail = [];
+gs=tc=25;
+
+function game() {
+
+    positionX = positionX + vitesseX;
+    positionY = positionY + vitesseY;
+
+    if(positionX<0) {
+        positionX = tc-1;
+    }
+
+    if(positionX>tc-1) {
+        positionX = 0;
+    }
+
+    if(positionY<0) {
+        positionY = tc-1;
+    }
+
+    if(positionY>tc-1) {
+        positionY = 0;
+    }
+
+
+    canvasContext.fillStyle="black";
+    canvasContext.fillRect(0,0,canvas.width,canvas.height);
+
+    canvasContext.fillStyle="lime";
+    for (var i=0;i<trail.length;i++) {
+        canvasContext.fillRect(trail[i].x * gs, trail[i].y * gs, gs-2, gs - 2);
+        if (trail[i].x==positionX  && trail[i].y==positionY ) {
+            tail = 5;
+        }
+    }
+
+    trail.push({x:positionX, y:positionY});
+    while(trail.length>tail) {
+        trail.shift();
+    }/*
+    */
+
+    if (bonusX==positionX && bonusY==positionY) {
+        tail++;
+        bonusX = Math.floor(Math.random()*tc);
+        bonusY = Math.floor(Math.random()*tc);
+    }
+    canvasContext.fillStyle="red";
+    canvasContext.fillRect(bonusX *gs, bonusY *gs, gs-2, gs-2)
+}
+
+function keyPush(evt){
+    switch(evt.keyCode) {
+        case 37:
+        vitesseX=-1;
+        vitesseY=0;
+        break;
+        case 38:
+        vitesseX=0;
+        vitesseY=-1;
+        break;
+        case 39:
+        vitesseX=1;
+        vitesseY=0;
+        break;
+        case 40:
+        vitesseX=0;
+        vitesseY=1;
+        break;
+    }
+}
+
+
+</script>
+</html>

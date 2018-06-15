@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming House</title>
+    <!-- p5 LOAD IT FIRST BECAUSE FIRST THING SHOWN-->
+
+
+    <link rel="stylesheet" href="theme.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+</head>
+
+<script type="text/javascript">
+function detectNotMobile() {
+    console.log(window.innerWidth);
+    if(window.innerWidth <= 1300) {
+        return false;
+    } else {
+        return true;
+    }
+}
+function init() {
+    if (detectNotMobile()) {
+        document.write('<script src=./p5/p5.min.js></' + 'script>');
+        document.write('<script src="./p5/steeringBehaviour/sketch.js"></' + 'script>');
+        document.write('<script src="./p5/steeringBehaviour/vehicule.js"></' + 'script>');
+    }
+}
+
+init();
+
+</script>
+<body>
+
+    <!-- Top navigation -->
+    <div class="topnav" id="myTopnav">
+
+        <!-- Centered link -->
+        <div class="topnav-centered" id="hello">
+            <a href="../me.html" class="active">Home</a>
+        </div>
+
+        <!-- Left-aligned links (default) -->
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+
+        <!-- Right-aligned links -->
+        <div class="topnav-right">
+            <a rel="tooltip" title="" data-placement="bottom"  href="https://www.linkedin.com/in/romain-jacquier-71861114b/" target="_blank" data-original-title="Send me a message on Linkedin">
+                <i class="fa fa-linkedin"></i>
+            </a>
+            <a rel="tooltip" title="" data-placement="bottom" href="https://www.facebook.com/rom1jacquier" target="_blank" data-original-title="Send me a message on Facebook">
+                <i class="fa fa-facebook-square"></i>
+            </a>
+            <a rel="tooltip" title="" data-placement="bottom" href="https://github.com/Romainj1" target="_blank" data-original-title="Take a look at my github">
+                <i class="fa fa-github"></i>
+            </a>
+            <a rel="tooltip" title="" data-placement="bottom" href="./cv.html" target="_blank" data-original-title="Voir mon CV !">
+                CV
+            </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+    <div class="title">
+        <div id="sketch-holder">
+            <!-- Our sketch will go here! -->
+        </div>
+        <h1 id="smallScreenTitle">GAME</h1>
+    </div>
+    <div class="separator">
+    </div>
+    <div class="main" >
+        <div class="flip-container">
+            <div class="flipper">
+                <div class="front">
+                    <div class="front-content">
+                        <!-- THANKS TO JEDI FONT https://www.dafont.com/fr/star-jedi.font-->
+                        <p>=snak;=</p>
+                    </div>
+                    <img class="image" src="./img/snake.png" alt="Snake" style="width:100%">
+
+                </div>
+                <div class="back">
+                    <a href="./snake.html" class="button-block">play</a>
+                    <a href="./snake.html" class="button-block">play</a>
+                    <a href="./snake.html" class="button-block">play</a>
+                    <a class="button-block">pointless button</a>
+                    <a href="./snake.html" class="button-block">play</a>
+                </div>
+            </div>
+        </div>
+        <div class="flip-container">
+            <div class="flipper">
+                <div class="front">
+                    <div class="front-content">
+                        <!-- THANKS TO JEDI FONT https://www.dafont.com/fr/star-jedi.font-->
+                        <p>flappy bird</p>
+                    </div>
+                    <img class="image" src="./img/flappyBird.png" alt="Snake" style="width:100%">
+
+                </div>
+                <div class="back">
+                    <a class="button-block">play</a>
+                    <a class="button-block">play</a>
+                    <a class="button-block">play</a>
+                    <a href="./p5/flappyBird/index.html" class="button-block">pointless button</a>
+                    <a class="button-block">play</a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="flip-container">
+            <div class="flipper">
+                <div class="front">
+                    <div class="front-content">
+                        <p>=snak;=</p>
+                    </div>
+                    <img class="image" src="./img/snake.png" alt="Snake" style="width:100%">
+
+                </div>
+                <div class="back">
+                    <a class="button-block">play</a>
+                    <a class="button-block">play</a>
+                    <a class="button-block">play</a>
+                    <a class="button-block">pointless button</a>
+                    <a class="button-block">play</a>
+                </div>
+            </div>
+        </div>
+        <div class="flip-container">
+            <div class="flipper">
+                <div class="front">
+                    <div class="front-content">
+                        <p>=snak;=</p>
+                    </div>
+                    <img class="image" src="./img/snake.png" alt="Snake" style="width:100%">
+
+                </div>
+                <div class="back">
+                    <a class="button-block">play</a>
+                    <a class="button-block">play</a>
+                    <a class="button-block">play</a>
+                    <a class="button-block">pointless button</a>
+                    <a class="button-block">play</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-container">
+            <div class="flipper">
+                <div class="front">
+                    <div class="front-content">
+                        <p>=snak;=</p>
+                    </div>
+                    <img class="image" src="./img/snake.png" alt="Snake" style="width:100%">
+
+                </div>
+                <div class="back">
+                    <a class="button-block">play</a>
+                    <a class="button-block">play</a>
+                    <a class="button-block">play</a>
+                    <a class="button-block">pointless button</a>
+                    <a class="button-block">play</a>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+    <div style="margin-bottom:200px">
+
+    </div>
+</body>
+<script type="text/javascript">
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+        console.log(x.className);
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+</html>
