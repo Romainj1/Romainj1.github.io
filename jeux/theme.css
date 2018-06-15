@@ -1,10 +1,11 @@
+@charset "utf-8";
 /*  Author : Romain Jacquier
 My personalized theme.
 */
 
 @font-face {
-	font-family: "Jedi";
-	src: url('./font/Starjedi.ttf');
+    font-family: "Jedi";
+    src: url('./font/Starjedi.ttf');
 }
 
 .title {
@@ -38,13 +39,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-/*width: 100%;
-.topnav a:not(:first-child) {display: none;}
-*/
-
-
-#smallScreenTitle{
+#smallScreenTitle {
     background: #000;
     color: #fff;
     display: none;
@@ -55,33 +50,33 @@ body {
 /*  Card effect*/
 /* entire container, keeps perspective */
 .flip-container {
-	perspective: 500px;
+    perspective: 500px;
 }
-	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
-        margin-right: -128px;
-	}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+    margin-right: -128px;
+}
 
 .flip-container, .front, .back {
     margin: 64px;
-	width: 320px;
-	height: 460px;
+    width: 320px;
+    height: 460px;
     position:relative;
     float: left;
 }
 
 /* flip speed goes here */
 .flipper {
-	transition: 0.6s;
-	transform-style: preserve-3d;
-	position:relative;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position:relative;
 }
 
 /* hide back of pane during swap */
 .front, .back {
-	backface-visibility: hidden;
-	position:absolute;
+    backface-visibility: hidden;
+    position:absolute;
     background:  #000;
     box-shadow: 0px 0px 32px 16px #fff;
     overflow:hidden;
@@ -89,8 +84,8 @@ body {
 
 /* front pane, placed above back */
 .front {
-	/* for firefox 31 */
-	transform: rotateY(0deg);
+    /* for firefox 31 */
+    transform: rotateY(0deg);
 }
 
 .front-content {
@@ -103,7 +98,7 @@ body {
 /* back, initially hidden pane */
 .back {
     font-family: "Jedi", Times, serif;
-	transform: rotateY(180deg);
+    transform: rotateY(180deg);
     font-size: 28px;
 }
 
@@ -225,13 +220,13 @@ body {
 @media screen and (max-width: 1300px) {
     .flip-container:hover .flipper, .flip-container.hover .flipper {
         margin-right: 0px;
-	}
+    }
 
     #sketch-holder {
         display: none;
     }
 
-    #smallScreenTitle{
+    #smallScreenTitle {
         display: inline;
     }
 
