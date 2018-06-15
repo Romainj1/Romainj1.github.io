@@ -7,8 +7,7 @@ install: true
 addons:
   sonarcloud:
     organization: "romainj1-github"
-    token:
-      secure:6cb17765ee98797a4ab265a10ec0d26d78566c4f
+    
 # Build step
 script:
   - sonar-scanner
