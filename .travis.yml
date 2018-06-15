@@ -10,7 +10,7 @@ addons:
 
 # Build step
 script:
-  - sonar-scanner -Dsonar.java.binaries=./classes
+  - sonar-scanner
 
 
 notifications:
