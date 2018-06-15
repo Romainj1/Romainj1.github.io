@@ -1,0 +1,17 @@
+language: html
+
+# Nothing to install
+install: true
+
+# Sonar Integration
+addons:
+  sonarcloud:
+    organization: "romainj1-github"
+    
+# Build step
+script:
+  - sonar-scanner
+
+
+notifications:
+email: false
