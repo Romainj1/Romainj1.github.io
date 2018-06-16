@@ -2,27 +2,54 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Pong</title>
+    <!-- My theme -->
+    <link rel="stylesheet" href="theme.css">
+
+    <!-- Icons library -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <title>Snake</title>
     <style>
+
     body {
-        align-content: center;
-        align-items: center;
-        background: #202020;
-        display: flex;
         margin: 0;
-    }
-    canvas {
-        border: solid 1px #fff;
-        border-left: none;
-        border-right: none;
-        image-rendering: pixelated;
-        width: 100%;
-        margin : 0 auto;
     }
     </style>
 </head>
 <body>
-    <canvas id="pong" width="850" height="400" />
+    <!-- Top navigation -->
+    <div class="topnav" id="myTopnav">
+
+        <!-- Centered link -->
+        <div class="topnav-centered" id="hello">
+            <a href="./index.html" class="active">Game Home</a>
+        </div>
+
+        <!-- Left-aligned links (default) -->
+        <a href="../en/me.html">Who I am ?</a>
+
+        <!-- Right-aligned links -->
+        <div class="topnav-right">
+            <a href="https://www.linkedin.com/in/romain-jacquier-71861114b/">
+                <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/rom1jacquier">
+                <i class="fa fa-facebook-square"></i>
+            </a>
+            <a href="https://github.com/Romainj1">
+                <i class="fa fa-github"></i>
+            </a>
+            <a href="../en/cv.html">
+                CV
+            </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+    <div class="gamePage">
+        <h1>pong</h1>
+        <canvas class="gameCanvas"id="pong" width="1400" height="700" />
+    </div>
 </body>
 
 <script>
@@ -66,14 +93,14 @@ class Rectangle {
 
 class Ball extends Rectangle {
     constructor() {
-        super(10,10);
+        super(15,15);
         this.vel = new Vec;
     }
 }
 
 class Player extends Rectangle{
     constructor() {
-        super(20,100);
+        super(25,100);
         this.score=0;
         this.vel = new Vec;
     }
@@ -81,7 +108,7 @@ class Player extends Rectangle{
 
 class Pong {
     constructor(canvas){
-        this.CHAR_PIXELS = 10;
+        this.CHAR_PIXELS = 20;
         this.CHARS = [
             '111101101101111',
             '010010010010010',
@@ -96,7 +123,7 @@ class Pong {
         ].map(str => {
             const canvas = document.createElement('canvas');
 
-            canvas.height = this.CHAR_PIXELS * 5;
+            canvas.height = this.CHAR_PIXELS * 6;
             canvas.width = this.CHAR_PIXELS *3;
             const context = canvas.getContext('2d');
             context.fillStyle = '#fff';

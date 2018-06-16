@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaming House</title>
-    <!-- p5 LOAD IT FIRST BECAUSE FIRST THING SHOWN-->
 
 
     <link rel="stylesheet" href="theme.css">
@@ -23,6 +22,8 @@ function detectNotMobile() {
 }
 function init() {
     if (detectNotMobile()) {
+        // p5 Framework for Game title
+        // should not be loaded if on mobile (title need ~1300 px width)
         document.write('<script src=./p5/p5.min.js></' + 'script>');
         document.write('<script src="./p5/steeringBehaviour/sketch.js"></' + 'script>');
         document.write('<script src="./p5/steeringBehaviour/vehicule.js"></' + 'script>');
@@ -39,25 +40,24 @@ init();
 
         <!-- Centered link -->
         <div class="topnav-centered" id="hello">
-            <a href="../me.html" class="active">Home</a>
+            <a href="#" class="active">Game Home</a>
         </div>
 
         <!-- Left-aligned links (default) -->
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
+        <a href="../en/me.html">Who I am ?</a>
 
         <!-- Right-aligned links -->
         <div class="topnav-right">
-            <a rel="tooltip" title="" data-placement="bottom"  href="https://www.linkedin.com/in/romain-jacquier-71861114b/" target="_blank" data-original-title="Send me a message on Linkedin">
+            <a href="https://www.linkedin.com/in/romain-jacquier-71861114b/">
                 <i class="fa fa-linkedin"></i>
             </a>
-            <a rel="tooltip" title="" data-placement="bottom" href="https://www.facebook.com/rom1jacquier" target="_blank" data-original-title="Send me a message on Facebook">
+            <a href="https://www.facebook.com/rom1jacquier">
                 <i class="fa fa-facebook-square"></i>
             </a>
-            <a rel="tooltip" title="" data-placement="bottom" href="https://github.com/Romainj1" target="_blank" data-original-title="Take a look at my github">
+            <a href="https://github.com/Romainj1">
                 <i class="fa fa-github"></i>
             </a>
-            <a rel="tooltip" title="" data-placement="bottom" href="./cv.html" target="_blank" data-original-title="Voir mon CV !">
+            <a href="../en/cv.html">
                 CV
             </a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -107,30 +107,30 @@ init();
                     <a class="button-block">play</a>
                     <a class="button-block">play</a>
                     <a class="button-block">play</a>
-                    <a href="./p5/flappyBird/index.html" class="button-block">pointless button</a>
-                    <a class="button-block">play</a>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="flip-container">
-            <div class="flipper">
-                <div class="front">
-                    <div class="front-content">
-                        <p>=snak;=</p>
-                    </div>
-                    <img class="image" src="./img/snake.png" alt="Snake" style="width:100%">
-
-                </div>
-                <div class="back">
-                    <a class="button-block">play</a>
-                    <a class="button-block">play</a>
-                    <a class="button-block">play</a>
-                    <a class="button-block">pointless button</a>
+                    <a href="./flappyBird.html" class="button-block">pointless button</a>
                     <a class="button-block">play</a>
                 </div>
             </div>
         </div>
         <div class="flip-container">
+            <div class="flipper">
+                <div class="front">
+                    <div class="front-content">
+                        <p>pong</p>
+                    </div>
+                    <img class="image" src="./img/pong.png" alt="Snake" style="width:100%">
+
+                </div>
+                <div class="back">
+                    <a href="./pong.html" class="button-block">ping</a>
+                    <a href="./pong.html" class="button-block">pong</a>
+                    <a href="./pong.html" class="button-block">play</a>
+                    <a href="./pong.html" class="button-block">ping</a>
+                    <a href="./pong.html" class="button-block">pong</a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="flip-container">
             <div class="flipper">
                 <div class="front">
                     <div class="front-content">

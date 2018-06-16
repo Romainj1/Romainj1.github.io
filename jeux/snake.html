@@ -2,25 +2,55 @@
 <html>
 <head>
     <meta charset="UTF-8" />
+    <!-- My theme -->
+    <link rel="stylesheet" href="theme.css">
+
+    <!-- Icons library -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
     <title>Snake</title>
     <style>
+
     body {
-        align-content: center;
-        align-items: center;
-        background: #202020;
-        display: flex;
         margin: 0;
-    }
-    canvas {
-        border: none
-        image-rendering: pixelated;
-        width: 40%;
-        margin : 0 auto;
     }
     </style>
 </head>
 <body>
-    <canvas id="snake" width="625" height="625" />
+    <!-- Top navigation -->
+    <div class="topnav" id="myTopnav">
+
+        <!-- Centered link -->
+        <div class="topnav-centered" id="hello">
+            <a href="./index.html" class="active">Game Home</a>
+        </div>
+
+        <!-- Left-aligned links (default) -->
+        <a href="../en/me.html">Who I am ?</a>
+
+        <!-- Right-aligned links -->
+        <div class="topnav-right">
+            <a href="https://www.linkedin.com/in/romain-jacquier-71861114b/">
+                <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/rom1jacquier">
+                <i class="fa fa-facebook-square"></i>
+            </a>
+            <a href="https://github.com/Romainj1">
+                <i class="fa fa-github"></i>
+            </a>
+            <a href="../en/cv.html">
+                CV
+            </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="gamePage">
+        <h1>SNAKE</h1>
+        <canvas class="gameCanvas" id="snake" width="625px" height="625px"></canvas>
+    </div>
 </body>
 
 <script type="text/javascript">
@@ -61,9 +91,13 @@ function game() {
         positionY = 0;
     }
 
-
-    canvasContext.fillStyle="black";
+    canvasContext.fillStyle="#000";
+    // canvasContext.fillStyle="#FF000000";
     canvasContext.fillRect(0,0,canvas.width,canvas.height);
+
+    // canvasContext.fillStyle="#FF000000";
+    // canvasContext.clearRect(0, 0, canvas.width, canvas.height);
+    // canvasContext.fillRect(0,0,canvas.width,canvas.height);
 
     canvasContext.fillStyle="lime";
     for (var i=0;i<trail.length;i++) {
@@ -76,7 +110,7 @@ function game() {
     trail.push({x:positionX, y:positionY});
     while(trail.length>tail) {
         trail.shift();
-    }/*
+    }/*console.log(trail.length);
     */
 
     if (bonusX==positionX && bonusY==positionY) {

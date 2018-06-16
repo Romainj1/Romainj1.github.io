@@ -1,5 +1,5 @@
 var bird;
-var pipe = [];
+var pipes;
 var game;
 var distance;
 var score;
@@ -8,22 +8,30 @@ function init(){
     distance = 200;
     score =0;
     pipes = [];
+    // remmove all previous pipes
+    for (var i = pipes.length-1 ; i >= 0; i--) {
+        pipes.splice(i, 1);
+    }
     bird = new Bird();
     game = true;
 }
 
 function setup() {
-    createCanvas(800, 600);
+    var canvas = createCanvas(1200, 600);
+
+    canvas.parent('flappyBird');
     init();
 }
 
 function draw() {
+
     background(0);
     if (game){
         bird.update();
         bird.show();
-        if (distance < 50){
-            distance-= 0.1;
+        // hard from 100;
+        if (distance > 100){
+            distance-= 0.05;
         }
         if (frameCount % 100 == 0) {
             pipes.push(new Pipe(distance));
@@ -35,9 +43,7 @@ function draw() {
 
             if (pipes[i].hits(bird)) {
                 console.log("HIT")
-                for (var i = pipes.length-1 ; i >= 0; i--) {
-                    pipes.splice(i, 1);
-                }
+
                 game = false;
                 textSize(32);
                 text('SCORE :', 30, 30);
@@ -50,13 +56,12 @@ function draw() {
             }
         }
     } else {
-        textSize(128);
+        textSize(100);
         text('GAME OVER', 20, 120);
         textSize(32);
         text('SCORE :', 20, 250, 200);
         text(score, 220, 250);
         text('ENTER RETURN TO PLAY', 20, 350);
-        console.log("well");
     }
 }
 
@@ -66,7 +71,6 @@ function keyPressed() {
         bird.up();
     }
     if (keyCode === ENTER) {
-        console.log("key");
         init();
     }
 }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title>Flappy Bird</title>
+
+      <!-- My theme -->
+      <link rel="stylesheet" href="theme.css">
+
+      <!-- Icons library -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+      <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+      <script src="./p5/p5.min.js"></script>
+      <!-- <script src="../addons/p5.dom.min.js"></script>
+      <script src="../addons/p5.sound.min.js"></script> -->
+      <script src="./p5/flappyBird/flappyBird.js"></script>
+      <script src="./p5/flappyBird/bird.js"></script>
+      <script src="./p5/flappyBird/pipe.js"></script>
+  </head>
+  <body>
+      <!-- Top navigation -->
+      <div class="topnav" id="myTopnav">
+
+          <!-- Centered link -->
+          <div class="topnav-centered" id="hello">
+              <a href="./index.html" class="active">Game Home</a>
+          </div>
+
+          <!-- Left-aligned links (default) -->
+          <a href="../en/me.html">Who I am ?</a>
+
+          <!-- Right-aligned links -->
+          <div class="topnav-right">
+              <a href="https://www.linkedin.com/in/romain-jacquier-71861114b/">
+                  <i class="fa fa-linkedin"></i>
+              </a>
+              <a href="https://www.facebook.com/rom1jacquier">
+                  <i class="fa fa-facebook-square"></i>
+              </a>
+              <a href="https://github.com/Romainj1">
+                  <i class="fa fa-github"></i>
+              </a>
+              <a href="../en/cv.html">
+                  CV
+              </a>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars"></i>
+              </a>
+          </div>
+      </div>
+
+      <div class="gamePage">
+          <h1>flappy bird</h1>
+          <div class="gameCanvas" id="flappyBird"></div>
+      </div>
+  </body>
+</html>

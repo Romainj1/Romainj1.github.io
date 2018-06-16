@@ -4,7 +4,7 @@ function Pipe(distance) {
     this.bottom = height - this.top - distance;
     this.x = width;
     this.w = 20;
-    this.speed = 2;
+    this.speed = 5;
 
 
     this.show = function() {
