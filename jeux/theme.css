@@ -153,13 +153,13 @@ body {
 .topnav .icon {
     display: none;
     color: black;
-    background-color: #f00;
+    background-color: #900;
 }
 
 .topnav a {
     float: left;
     display: block;
-    color: #f00;
+    color: #900;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -169,12 +169,12 @@ body {
 }
 
 .topnav a:hover {
-    background-color: #f00;
+    background-color: #900;
     color: black;
 }
 
 .topnav a.active {
-    background-color: #f00;;
+    background-color: #900;;
     color: black;
 }
 
