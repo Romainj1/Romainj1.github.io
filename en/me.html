@@ -45,6 +45,13 @@
 
 </head>
 <style type="text/css">
+p {
+    font-size: 18px;
+}
+
+li {
+    font-size: 16px;
+}
 /* Popup container - can be anything you want */
 .popup {
   position: relative;
@@ -187,6 +194,11 @@
                             <h4>CV</h4>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="../jeux/index.html" target="_blank" data-original-title="See my mini-games !">
+                            <em class="fa fa-gamepad"></em>
+                        </a>
+                    </li>
                 </ul>
             </div>
 
@@ -240,7 +252,7 @@
                                     <div class="feature-box-1 pull-left color-2"><span><em class="fa fa-code myIcon colorOrange"></em></span></div>
                                     <div class="feature-box-2">
                                         <h3>I like IT science</h3>
-                                        <p>I began to develop 4 years ago. I first learned basic algorithms, did a few mini-games.</p>
+                                        <p>I began to develop 4 years ago. I first learned basic algorithms, <a href="../jeux/index.html">did a few mini-games</a>.</p>
                                     </div>
                                 </div>
                                 <div class="feature-box col-sm-6 col-xs-12">
@@ -538,7 +550,6 @@
         <script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
         <script src="../assets/js/plugins/nouislider.min.js"></script>
         <script src="../assets/js/material-kit.js?v=2.0.2"></script>
-        <script src="../assets/assets-for-demo/js/material-kit-demo.js"></script>
         <script>
             $(document).ready(function() {
 
@@ -651,7 +662,6 @@
     popup.classList.toggle("show");
 }
 </script>
-<script src="../AOS/dist/aos.js"></script>
 <script>
   AOS.init({
     easing: 'ease-in-out-sine'

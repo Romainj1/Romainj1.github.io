@@ -31,13 +31,6 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
     <link rel="stylesheet" href="../assets/css/material-kit.css?v=2.0.2">
-    <!-- Documentation extras -->
-<!--
-    <script src='bower_components/dyn-css/dyncss.js' type='text/javascript'/> -->
-
-
-
-
 
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
@@ -45,15 +38,22 @@
 
 </head>
 <style type="text/css">
+p {
+    font-size: 18px;
+}
+
+li {
+    font-size: 16px;
+}
 /* Popup container - can be anything you want */
 .popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 /* Im Style werden alle .lang-Elemente erstmal ausgeblendet. */
@@ -66,48 +66,48 @@
 
 /* The actual popup */
 .popup .popuptext {
-  visibility: hidden;
-  width: 160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
 }
 
 /* Popup arrow */
 .popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
 }
 
 /* Toggle this class - hide and show the popup */
 .popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
 }
 
 /* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 @keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
+    from {opacity: 0;}
+    to {opacity:1 ;}
 }
 
 .fa {
@@ -152,7 +152,7 @@
     <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav">
         <div class="container">
             <div class="navbar-translate">
-                <h4>Sprache :
+                <h4>Sprachen :
                     <a href="../fr/me.html">
                         <span data-toggle="tooltip" data-placement="bottom" title="Français" class="flag-icon flag-icon-fr"></span>
                     </a>
@@ -163,12 +163,7 @@
                         <span data-toggle="tooltip" data-placement="bottom" title="Deutsch" class="flag-icon flag-icon-de"></span>
                     </a>
                 </h4>
-                <!-- <a class="navbar-brand" href="./cv.html">Voir mon CV</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    <span class="navbar-toggler-icon"></span>
-                    <span class="navbar-toggler-icon"></span>
-                </button> -->
+
             </div>
 
             <div class="collapse navbar-collapse">
@@ -184,13 +179,18 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://github.com/Romainj1" target="_blank" data-original-title="Mein github einschauen !>
+                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://github.com/Romainj1" target="_blank" data-original-title="Mein github einschauen !">
                             <em class="fa fa-github"></em>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="./cv.html" target="_blank" data-original-title="Mein Lebenslauf einschauen">
                             <h4>CV</h4>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="../jeux/index.html" target="_blank" data-original-title="Meine mini-Spiele !">
+                            <em class="fa fa-gamepad"></em>
                         </a>
                     </li>
                 </ul>
@@ -214,7 +214,7 @@
                 </div>
 
                 <div style="align-self: center;" class="feature-box col-sm-4">
-                    <img style=" border-radius: 50%;" src="../assets/img/favicon.png"/>
+                    <img style="border-radius: 50%;" src="../assets/img/favicon.png"/>
                 </div>
             </div>
         </div>
@@ -246,7 +246,7 @@
                                     <div class="feature-box-1 pull-left color-2"><span><em class="fa fa-code myIcon colorOrange"></em></span></div>
                                     <div class="feature-box-2">
                                         <h3>Ich liebe die Informatik</h3>
-                                        <p>Ich habe vor 4 Jahren die Programmierung begonnen. Ich habe zuerst grundlegende Algorithmen gelernt, und dann einige Spiele entworfen.</p>
+                                        <p>Ich habe vor 4 Jahren die Programmierung begonnen. Ich habe zuerst grundlegende Algorithmen gelernt, <a href="../jeux/index.html">und dann einige Spiele entworfen.</a></p>
                                     </div>
                                 </div>
                                 <div class="feature-box col-sm-6 col-xs-12">
@@ -426,208 +426,198 @@
 
                                 <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-date"><strong>Jan-2018 Jan-2019</strong> <span>Jetzt</span> </div>
                                 <p>Dieses Projekt besteht im Laufe eines Schuljahres aus der Arbeit an der Neuzuweisung von RATP-Agenten im Falle einer Überschwemmung der Seine.
-                                    Ziel ist die Schaffung eines Entscheidungshilfetools zur Optimierung der Neuzuweisung von Agenten innerhalb der verschiedenen Standorte des untersuchten Managers, um das Pendeln zu begrenzen und privilegierte Verkehrskorridore für Verkehrsmeldungen vorzuschlagen. .
+                                    Ziel ist die Schaffung eines Entscheidungshilfetools zur Optimierung der Neuzuweisung von Agenten innerhalb der verschiedenen Standorte des untersuchten Managers, um das Pendeln zu begrenzen und privilegierte Verkehrskorridore für Verkehrsmeldungen vorzuschlagen. <br/>
                                     Dieses Projekt wird im Rahmen einer <strong>ISO 9001 Zertifizierung</strong> durchgeführt.
                                     Meine Rolle in diesem Projekt ist Entwickler. Ich bin auch verantwortlich für die <strong> Netzwerkkonfiguration </strong> der IT-Tools, die wir verwenden.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="cd-timeline-block">
-                                <div class="cd-timeline-img cd-type-edu">
-                                    <em class="fa fa-flask"></em>
-                                </div>
-
-                                <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-timeline-content">
-                                    <h2>4. Jahr Student</h2>
-                                    <p class="subtitle"><a href="https://www.insa-rouen.fr/" title="Nationales Institut für Angewandte Wissenschaften">INSA Rouen Normandie</a>, <a href="http://asi.insa-rouen.fr/?language=en" title="ASI - Informationssystemarchitekturen- ASI">Institut für Informatik - ASI</a>
-                                    </p>
-
-                                    <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-date">
-                                        <strong>2018</strong> <span>Jetzt</span>
-                                    </div>
-
-                                    <p>
-                                        Ich bin derzeit im 1. Jahr von Master - <em>Baccalaureate+4</em><br/>
-                                        Hauptfächer untersucht:
-                                        <ul>
-                                            <li>Web</li>
-                                            <li>Datenwissenschaft</li>
-                                            <li>Electronik</li>
-                                            <li>Datenbank</li>
-                                            <li>Algorithmus</li>
-                                            <li>Projektmanagement</li>
-                                            <li>Qualität</li>
-                                        </ul>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="cd-timeline-block">
-                                <div class="cd-timeline-img cd-type-pro">
-                                    <em class="fa fa-coffee"></em>
-                                </div>
-
-                                <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-timeline-content">
-                                    <h2>Angeschlossene Kaffeemaschine (siehe auf GitHub : <a href="https://github.com/Koisell/SmartCoffeeMachine"><em class="fa fa-github"></em></a>)</h2>
-
-                                    <p class="subtitle"><a href="https://www.insa-rouen.fr/" title="Nationales Institut für Angewandte Wissenschaften">INSA Rouen Normandie</a>, <a href="http://asi.insa-rouen.fr/?language=en" title="ASI - Informationssystemarchitekturen - ASI">Institut für Informatik - ASI</a>
-                                    </p>
-
-                                    <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-date"><strong>2017-2018</strong><span>Jetzt</span> </div>
-                                    <p>Projekt mit einem anderen Studenten in der Informatikabteilung von INSA Rouen (ASI). Leistungen:
-                                        <ul>
-                                            <li>Gesichtserkennung dank einer Kamera. (<strong>OpenCv</strong>)</li>
-                                            <li>Entwicklung eines dokumentierten <strong>Api Rest </strong></li>
-                                            <li>Electronik (Sensor, Leiterplatte).</li>
-                                            <li><strong>Datenbank</strong> : Benutzerverwaltung.</li>
-                                        </ul>
-                                    </p>
-                                </div>
+                                </p>
                             </div>
                         </div>
-                        <div class="cd-timeline-dot"></div>
-                        <div class="cd-timeline-dot"></div>
-                        <div class="cd-timeline-dot"></div>
 
-                        <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-center mrgtop30">
-                            <a class="btn btn-info btn-lg" href="./cv.html">Weitere Informationen <em class="fa fa-chevron-right"></em></a>
-                        </p>
-                    </section>
+                        <div class="cd-timeline-block">
+                            <div class="cd-timeline-img cd-type-edu">
+                                <em class="fa fa-flask"></em>
+                            </div>
 
-                    <div class="sharing-area text-center">
-                        <div class="row justify-content-center">
-                            <h3>Kontaktieren Sie mich !</h3>
+                            <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-timeline-content">
+                                <h2>4. Jahr Student</h2>
+                                <p class="subtitle"><a href="https://www.insa-rouen.fr/" title="Nationales Institut für Angewandte Wissenschaften">INSA Rouen Normandie</a>, <a href="http://asi.insa-rouen.fr/?language=en" title="ASI - Informationssystemarchitekturen- ASI">Institut für Informatik - ASI</a>
+                                </p>
+
+                                <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-date">
+                                    <strong>2018</strong> <span>Jetzt</span>
+                                </div>
+
+                                <p>
+                                    Ich bin derzeit im 1. Jahr von Master - <em>Baccalaureate+4</em><br/>
+                                    Hauptfächer untersucht:
+                                    <ul>
+                                        <li>Web</li>
+                                        <li>Datenwissenschaft</li>
+                                        <li>Electronik</li>
+                                        <li>Datenbank</li>
+                                        <li>Algorithmus</li>
+                                        <li>Projektmanagement</li>
+                                        <li>Qualität</li>
+                                    </ul>
+                                </p>
+                            </div>
                         </div>
-                        <a style="background-color: #283e4a; text-transform: none;" class="btn btn-raised btn-twitter sharrre" href="https://www.linkedin.com/in/romain-jacquier-71861114b"/>
-                        <em class="fab fa-linkedin"></em> Linkedin
-                    </a>
-                    <a style="background-color: #365899; text-transform: none;" class="btn btn-raised btn-facebook sharrre" href="https://www.facebook.com/rom1jacquier">
-                        <em class="fa fa-facebook-square"></em> Facebook
-                    </a>
-                    <a style="background-color: #333333; text-transform: none;" href="https://github.com/Romainj1" target="_blank" class="btn btn-raised btn-github">
-                        <em class="fa fa-github"></em> GitHub
-                    </a>
-                    <button style="background-color: #e22421; text-transform: none;" onclick="myFunction('romain.jacquier@insa-rouen.fr')" target="_blank" class="btn btn-raised btn-github popup">
-                        <em class="fa fa-mail"></em> E-Mail (click)
-                        <span id="myPopup" class="popuptext">E-Mail kopiert</span>
-                    </button>
 
-                </div>
+                        <div class="cd-timeline-block">
+                            <div class="cd-timeline-img cd-type-pro">
+                                <em class="fa fa-coffee"></em>
+                            </div>
+
+                            <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-timeline-content">
+                                <h2>Angeschlossene Kaffeemaschine (siehe auf GitHub : <a href="https://github.com/Koisell/SmartCoffeeMachine"><em class="fa fa-github"></em></a>)</h2>
+
+                                <p class="subtitle"><a href="https://www.insa-rouen.fr/" title="Nationales Institut für Angewandte Wissenschaften">INSA Rouen Normandie</a>, <a href="http://asi.insa-rouen.fr/?language=en" title="ASI - Informationssystemarchitekturen - ASI">Institut für Informatik - ASI</a>
+                                </p>
+
+                                <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="cd-date"><strong>2017-2018</strong><span>Jetzt</span> </div>
+                                <p>Projekt mit einem anderen Studenten in der Informatikabteilung von INSA Rouen (ASI). Leistungen:
+                                    <ul>
+                                        <li>Gesichtserkennung dank einer Kamera. (<strong>OpenCv</strong>)</li>
+                                        <li>Entwicklung eines dokumentierten <strong>Api Rest </strong></li>
+                                        <li>Electronik (Sensor, Leiterplatte).</li>
+                                        <li><strong>Datenbank</strong> : Benutzerverwaltung.</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cd-timeline-dot"></div>
+                    <div class="cd-timeline-dot"></div>
+                    <div class="cd-timeline-dot"></div>
+
+                    <p data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="text-center mrgtop30">
+                        <a class="btn btn-info btn-lg" href="./cv.html">Weitere Informationen <em class="fa fa-chevron-right"></em></a>
+                    </p>
+                </section>
+
+                <div class="sharing-area text-center">
+                    <div class="row justify-content-center">
+                        <h3>Kontaktieren Sie mich !</h3>
+                    </div>
+                    <a style="background-color: #283e4a; text-transform: none;" class="btn btn-raised btn-twitter sharrre" href="https://www.linkedin.com/in/romain-jacquier-71861114b"/>
+                    <em class="fab fa-linkedin"></em> Linkedin
+                </a>
+                <a style="background-color: #365899; text-transform: none;" class="btn btn-raised btn-facebook sharrre" href="https://www.facebook.com/rom1jacquier">
+                    <em class="fa fa-facebook-square"></em> Facebook
+                </a>
+                <a style="background-color: #333333; text-transform: none;" href="https://github.com/Romainj1" target="_blank" class="btn btn-raised btn-github">
+                    <em class="fa fa-github"></em> GitHub
+                </a>
+                <button style="background-color: #e22421; text-transform: none;" onclick="myFunction('romain.jacquier@insa-rouen.fr')" target="_blank" class="btn btn-raised btn-github popup">
+                    <em class="fa fa-mail"></em> E-Mail (click)
+                    <span id="myPopup" class="popuptext">E-Mail kopiert</span>
+                </button>
+
             </div>
         </div>
-        <!-- Classic Modal -->
+    </div>
+    <!-- Classic Modal -->
 
-        <!--  End Modal -->
-        <footer class="footer ">
-            <div class="container">
-                <nav class="pull-left">
-                    <ul>
-                        <li>
-                            <a>
-                                Romain Jacquier
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                Letzte Änderungen : 06 Mai 2018
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </footer>
-        <!--   Core JS Files   -->
-        <script src="../assets/js/core/jquery.min.js"></script>
-        <script src="../assets/js/core/popper.min.js"></script>
-        <script src="../assets/js/bootstrap-material-design.js"></script>
-        <script src="../assets/js/plugins/moment.min.js"></script>
-        <script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
-        <script src="../assets/js/plugins/nouislider.min.js"></script>
-        <script src="../assets/js/material-kit.js?v=2.0.2"></script>
-        <script src="../assets/assets-for-demo/js/material-kit-demo.js"></script>
-        <script>
-            $(document).ready(function() {
-
-            //init DateTimePickers
-            materialKit.initFormExtendedDatetimepickers();
-
-            // Sliders Init
-            materialKit.initSliders();
-        });
-    </script>
+    <!--  End Modal -->
+    <footer class="footer ">
+        <div class="container">
+            <nav class="pull-left">
+                <ul>
+                    <li>
+                        <a>
+                            Romain Jacquier
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            Letzte Änderungen : 06 Mai 2018
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <!--   Core JS Files   -->
+    <script src="../assets/js/core/jquery.min.js"></script>
+    <script src="../assets/js/core/popper.min.js"></script>
+    <script src="../assets/js/bootstrap-material-design.js"></script>
+    <script src="../assets/js/plugins/moment.min.js"></script>
+    <script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+    <script src="../assets/js/plugins/nouislider.min.js"></script>
+    <script src="../assets/js/material-kit.js?v=2.0.2"></script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    $(document).ready(function() {
 
-      ga('create', 'UA-12985376-1', 'auto');
-      ga('send', 'pageview');
-  </script>
+        //init DateTimePickers
+        materialKit.initFormExtendedDatetimepickers();
 
-  <script type="text/javascript">
+        // Sliders Init
+        materialKit.initSliders();
+    });
+</script>
 
-    function setParallax() {
-                    /*if (navigator.userAgent.indexOf("Safari") >= 0 && navigator.userAgent.indexOf("Chrome") < 0) {jQuery("#me").css("background-attachment", "scroll").css("background-size", "cover");jQuery("#skills").css("background-attachment", "scroll").css("background-size", "cover");jQuery("#contact").css("background-attachment", "scroll").css("background-size", "cover");
-                    }
-                    else */
-                        if (jQuery(window).width() >= 768) {jQuery("#me").parallax("50%", 0.5);jQuery("#skills").parallax("50%", 0.5);jQuery("#contact").parallax("50%", 0.5);
-                }
+<script type="text/javascript">
+
+function setParallax() {
+    /*if (navigator.userAgent.indexOf("Safari") >= 0 && navigator.userAgent.indexOf("Chrome") < 0) {jQuery("#me").css("background-attachment", "scroll").css("background-size", "cover");jQuery("#skills").css("background-attachment", "scroll").css("background-size", "cover");jQuery("#contact").css("background-attachment", "scroll").css("background-size", "cover");
+}
+else */
+if (jQuery(window).width() >= 768) {jQuery("#me").parallax("50%", 0.5);jQuery("#skills").parallax("50%", 0.5);jQuery("#contact").parallax("50%", 0.5);
+}
+}
+
+jQuery(document).ready(function($) {
+
+    setParallax();
+
+    /* Just a stupid function so that no bot (and even no human) can understand this ;) */
+    $("#magicInsertA").click(function () {
+        chars = ["r", "f", "__", "t", "r", "e", "b", "o", "r", "-", "s", "a", "m", "o", "h", "t", "_", "s", "a", "m", "o", "h", "t"];
+        out = "";
+        n = chars.length;
+        for (i = 0; i < n; i++) {
+            if (chars[n - i - 1] == "_")
+            out += "@";
+            else if (chars[n - i - 1] == "__")
+            out += ".";
+            else
+            out += chars[n - i - 1];
+        }
+        var el = $("#magicInsert");
+
+        el.html(out);
+        el.removeClass("btn");
+        el.removeClass("btn-default");
+        $(this).attr("href", "mailto:"+out)
+
+        $(this).unbind("click");
+
+        return false;
+    });
+
+
+    var $timeline_block = $(".cd-timeline-block");
+    //hide timeline blocks which are outside the viewport
+    $timeline_block.each(function(){
+        if($(this).offset().top > $(window).scrollTop()+$(window).height()*0.75) {
+            $(this).find(".cd-timeline-img, .cd-timeline-content").addClass("is-hidden");
+        }
+    });
+
+    //on scolling, show/animate timeline blocks when enter the viewport
+    $(window).on("scroll", function(){
+        $timeline_block.each(function(){
+            if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find(".cd-timeline-img").hasClass("is-hidden") ) {
+                $(this).find(".cd-timeline-img, .cd-timeline-content").removeClass("is-hidden").addClass("bounce-in");
             }
+        });
+    });
+});
 
-            jQuery(document).ready(function($) {
+</script>
 
-                setParallax();
-
-                /* Just a stupid function so that no bot (and even no human) can understand this ;) */
-                $("#magicInsertA").click(function () {
-                    chars = ["r", "f", "__", "t", "r", "e", "b", "o", "r", "-", "s", "a", "m", "o", "h", "t", "_", "s", "a", "m", "o", "h", "t"];
-                    out = "";
-                    n = chars.length;
-                    for (i = 0; i < n; i++) {
-                        if (chars[n - i - 1] == "_")
-                            out += "@";
-                        else if (chars[n - i - 1] == "__")
-                            out += ".";
-                        else
-                            out += chars[n - i - 1];
-                    }
-                    var el = $("#magicInsert");
-
-                    el.html(out);
-                    el.removeClass("btn");
-                    el.removeClass("btn-default");
-                    $(this).attr("href", "mailto:"+out)
-
-                    $(this).unbind("click");
-
-                    return false;
-                });
-
-
-                var $timeline_block = $(".cd-timeline-block");
-                    //hide timeline blocks which are outside the viewport
-                    $timeline_block.each(function(){
-                        if($(this).offset().top > $(window).scrollTop()+$(window).height()*0.75) {
-                            $(this).find(".cd-timeline-img, .cd-timeline-content").addClass("is-hidden");
-                        }
-                    });
-
-                    //on scolling, show/animate timeline blocks when enter the viewport
-                    $(window).on("scroll", function(){
-                        $timeline_block.each(function(){
-                            if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find(".cd-timeline-img").hasClass("is-hidden") ) {
-                                $(this).find(".cd-timeline-img, .cd-timeline-content").removeClass("is-hidden").addClass("bounce-in");
-                            }
-                        });
-                    });
-                });
-
-            </script>
-
-            <script>
-              function myFunction(text) {
+<script>
+function myFunction(text) {
     //create a fake textarea in order toselect and copy to clipboard
     var textArea = document.createElement("textarea");
     textArea.style.position = 'fixed';
@@ -658,9 +648,8 @@
     popup.classList.toggle("show");
 }
 </script>
-<script src="../AOS/dist/aos.js"></script>
 <script>
-  AOS.init({
+AOS.init({
     easing: 'ease-in-out-sine'
 });
 </script>
