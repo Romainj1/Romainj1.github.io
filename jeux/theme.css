@@ -48,7 +48,7 @@ My personalized theme.
 .main {
     padding-bottom: 20px;
     background: #900;
-
+font-family: "Jedi", Times, serif;
     display: table;
     clear: both;
     text-align: center !important;
@@ -113,7 +113,6 @@ body {
 }
 
 .front-content {
-    font-family: "Jedi", Times, serif;
     font-size: 60px;
     line-height: 40px;
     color: green;
@@ -121,19 +120,29 @@ body {
 
 /* back, initially hidden pane */
 .back {
-    font-family: "Jedi", Times, serif;
     transform: rotateY(180deg);
     font-size: 28px;
+}
+.button-block-primary {
+    font-family: "Jedi", Times, serif;
+    background-color: #900;
+    color: #000;
+    padding: 14px 16px;
+    box-sizing: border-box;
+    width: 500px;
+    display: inline-block;
+    text-decoration:none;
 }
 
 .button-block {
     background-color: #000;
     color: #900;
     display: block;
-
     padding: 14px 16px;
     box-sizing: border-box;
 }
+
+
 
 .button-block:hover {
     background-color: #fff;

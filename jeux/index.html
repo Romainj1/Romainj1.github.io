@@ -70,10 +70,12 @@ init();
             <!-- Our sketch will go here! -->
         </div>
         <h1 id="smallScreenTitle">GAME</h1>
+        <a class="button-block-primary" href="#main">PLAY !</a>
     </div>
+
     <div class="separator">
     </div>
-    <div class="main" >
+    <div id="main" class="main">
         <div class="flip-container">
             <div class="flipper">
                 <div class="front">
@@ -149,24 +151,25 @@ init();
             </div>
         </div>
 
-        <!-- <div class="flip-container">
+        <div class="flip-container">
             <div class="flipper">
                 <div class="front">
                     <div class="front-content">
-                        <p>=snak;=</p>
+                        <p>bounce 2</p>
                     </div>
-                    <img class="image" src="./img/snake.png" alt="Snake" style="width:100%">
+                    <img class="image" src="./img/bounce2.png" alt="Snake" style="width:100%; height:65%">
 
                 </div>
                 <div class="back">
-                    <a class="button-block">play</a>
-                    <a class="button-block">play</a>
-                    <a class="button-block">play</a>
-                    <a class="button-block">pointless button</a>
-                    <a class="button-block">play</a>
+                    <a href="./bounce2.html" class="button-block">bounce 2</a>
+                    <a href="./bounce2.html" class="button-block">bounce 2</a>
+                    <a href="./bounce2.html" class="button-block">bounce 2</a>
+                    <a href="./bounce2.html" class="button-block">bounce 2</a>
+                    <a href="./bounce2.html" class="button-block">bounce 2</a>
                 </div>
             </div>
-        </div> -->
+        </div>
+
 
     </div>
     <div style="margin-bottom:200px">
@@ -178,7 +181,6 @@ function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
         x.className += " responsive";
-        console.log(x.className);
     } else {
         x.className = "topnav";
     }

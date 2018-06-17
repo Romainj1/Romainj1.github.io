@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <!-- My theme -->
+    <link rel="stylesheet" href="theme.css">
+
+    <!-- Icons library -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <title>Bounce 2</title>
+    <style>
+
+    body {
+        margin: 0;
+    }
+    </style>
+</head>
+<body>
+    <!-- Top navigation -->
+    <div class="topnav" id="myTopnav">
+
+        <!-- Centered link -->
+        <div class="topnav-centered" id="hello">
+            <a href="./index.html" class="active">Game Home</a>
+        </div>
+
+        <!-- Left-aligned links (default) -->
+        <a href="../en/me.html">Who I am ?</a>
+
+        <!-- Right-aligned links -->
+        <div class="topnav-right">
+            <a href="https://www.linkedin.com/in/romain-jacquier-71861114b/">
+                <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/rom1jacquier">
+                <i class="fa fa-facebook-square"></i>
+            </a>
+            <a href="https://github.com/Romainj1">
+                <i class="fa fa-github"></i>
+            </a>
+            <a href="../en/cv.html">
+                CV
+            </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+    <div class="gamePage">
+        <h1>bounce 2</h1>
+        <canvas class="gameCanvas" id="bounce" width="600" height="700" />
+    </div>
+</body>
+<script type="text/javascript">
+
+class Vec {
+    constructor(x = 0, y = 0) {
+        this.x = x;
+        this.y = y;
+    }
+
+    get len() {
+        return Math.sqrt(this.x * this.x + this.y * this.y);
+    }
+
+    set len(value) {
+        const fact = value / this.len;
+        this.x *= fact;
+        this.y *= fact;
+    }
+}
+
+class Circle {
+    constructor(radius) {
+        this.pos = new Vec;
+        this.radius = radius;
+    }
+
+    get left() {
+        return this.pos.x - this.radius;
+    }
+    get right() {
+        return this.pos.x + this.radius;
+    }
+
+    get top() {
+        return this.pos.y - this.radius;
+    }
+    get bottom() {
+        return this.pos.y + this.radius;
+    }
+}
+
+class Ball extends Circle {
+    constructor() {
+        super(40);
+        this.vel = new Vec;
+    }
+
+    newDirection(player) {
+        if (this.vel.y > 10){
+            this.vel.y += -50;
+        }
+
+        this.vel.x = (this.pos.x - player.pos.x)/2;
+        if (this.vel.x>20) {
+            this.vel.x = 20;
+        }
+
+        if (this.vel.x<-15) {
+            this.vel.x = -15;
+        }
+    }
+}
+
+class Player extends Circle {
+    constructor() {
+        super(20);
+        this.score=0;
+        this.bestScore = this.score;
+        this.lastCollision = false;
+    }
+
+    onCollide(ball) {
+        if (ball.pos.y<this.pos.y && Math.sqrt(Math.pow(ball.pos.x - this.pos.x,2)+Math.pow(ball.pos.y - this.pos.y,2))<this.radius+ball.radius) {
+            if (!this.lastCollision) {
+                this.score +=1;
+                this.lastCollision = true;
+                if (this.score>this.bestScore) {
+                    this.bestScore = this.score;
+                }
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+class Bounce2 {
+    constructor(canvas) {
+        this.canvas = canvas;
+        this._context = canvas.getContext("2d");
+        this._context.font = "30px Jedi";
+        this.createBall();
+        this.createPlayer();
+
+        this.distance = this.player.radius + this.ball.radius;
+
+        let lastTime;
+        const callback = (millis) => {
+            if (lastTime) {
+                this.update((millis - lastTime) / 1000);
+                // this.draw();
+            }
+            lastTime = millis;
+            requestAnimationFrame(callback);
+        };
+        callback();
+        this.start();
+    }
+
+    createBall() {
+        this.ball = new Ball();
+    }
+
+    createPlayer() {
+        this.player = new Player();
+    }
+
+    drawCircle(object) {
+        this._context.arc(75, 75, 10, 0, Math.PI*2, true);
+        this._context.fillStyle = "white";
+        this._context.beginPath();
+        this._context.arc(object.pos.x,object.pos.y,object.radius,0,2*Math.PI);
+        this._context.fill();
+    }
+
+    start() {
+        this.ball.pos.x = canvas.width/2;
+        this.ball.pos.y = canvas.height/4;
+        this.gravity = 1.4;
+        this.ball.vel.x =  0;
+        this.ball.vel.y = -15;
+        this.player.score = 0;
+        this.game = true;
+    }
+
+    draw() {
+        this._context.fillStyle = "black";
+        this._context.fillRect(0,0,canvas.width,canvas.height);
+
+        this._context.fillStyle = "white";
+        this.drawCircle(this.ball);
+        this.drawCircle(this.player);
+        this._context.fillText("score : " + this.player.score,200,50);
+
+        this._context.fillText("best score : " + this.player.bestScore,200,100);
+        if (!this.game) {
+            this._context.font="64px Jedi";
+            this._context.fillText("game",200,200);
+            this._context.fillText("over",200,300);
+            this._context.font="30px Jedi";
+        }
+    }
+
+
+
+    update(dt) {
+        if (this.game) {
+            if (this.ball.vel.y <20) {
+                this.ball.vel.y += this.gravity;
+            }
+            this.ball.pos.x += this.ball.vel.x;
+            this.ball.pos.y += this.ball.vel.y;
+
+            if (this.ball.left < 0 || this.ball.right > canvas.width) {
+                // hits borders right or left
+                this.ball.vel.x = -this.ball.vel.x;
+                this.ball.pos.x += this.ball.vel.x;
+            }
+            if (this.player.onCollide(this.ball)) {
+                this.ball.newDirection(this.player);
+                this.ball.pos.x += this.ball.vel.x;
+
+                this.ball.pos.y = this.player.pos.y - this.distance;
+            } else {
+                this.player.lastCollision = false;
+            }
+
+            if (this.ball.right > canvas.width) {
+                this.ball.pos.x = canvas.width - this.ball.radius;
+                this.ball.pos.y = this.player.pos.y - this.distance;
+            }
+
+            if (this.ball.left < 0) {
+                this.ball.pos.x = this.ball.radius;
+                this.ball.pos.y = this.player.pos.y - this.distance;
+            }
+
+            if (this.ball.bottom > canvas.height) {
+                this.ball.pos.y = canvas.height-1;
+                this.ball.vel.len = 0;
+                console.log("Game over");
+                this.game =false;
+            }
+        }
+
+        this.draw();
+    }
+}
+let criticalCumputation;
+const canvas = document.querySelector('#bounce');
+const bounce2 = new Bounce2(canvas);
+
+canvas.addEventListener('mousemove', event => {
+    const scaleX = event.offsetX / event.target.getBoundingClientRect().width;
+    bounce2.player.pos.x = (canvas.width * scaleX) ;
+
+    const scaleY = event.offsetY / event.target.getBoundingClientRect().height;
+    bounce2.player.pos.y = (canvas.height * scaleY) ;
+});
+
+canvas.addEventListener("click", event => {
+    bounce2.start();
+});
+
+function keyPush(evt){
+    if (bounce2.game) {
+        // bounce2.update();
+    }
+    else {
+        bounce2.start();
+    }
+}
+
+document.addEventListener("keydown", keyPush);
+
+</script>
+</html>
