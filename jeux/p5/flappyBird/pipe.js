@@ -3,8 +3,8 @@ function Pipe(distance) {
     this.top = random(height/2);
     this.bottom = height - this.top - distance;
     this.x = width;
-    this.w = 20;
-    this.speed = 5;
+    this.w = 80;
+    this.speed = 8;
 
 
     this.show = function() {

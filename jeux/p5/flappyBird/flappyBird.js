@@ -17,7 +17,7 @@ function init(){
 }
 
 function setup() {
-    var canvas = createCanvas(1200, 600);
+    var canvas = createCanvas(800, 600);
 
     canvas.parent('flappyBird');
     init();
@@ -33,7 +33,7 @@ function draw() {
         if (distance > 100){
             distance-= 0.05;
         }
-        if (frameCount % 100 == 0) {
+        if (frameCount % 75 == 0) {
             pipes.push(new Pipe(distance));
 
         }
@@ -67,7 +67,7 @@ function draw() {
 
 function keyPressed() {
 
-    if (key == ' ') {
+    if (key === ' ') {
         bird.up();
     }
     if (keyCode === ENTER) {
